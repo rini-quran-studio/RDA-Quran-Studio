@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RDA Quran Studio - Studi Al-Qur'an & Tafsir</title>
+    <style>
+        :root {
+            --bg-dark: #0b131f;
+            --card-bg: rgba(255, 255, 255, 0.07);
+            --border-glass: rgba(255, 255, 255, 0.15);
+            --primary-accent: #2dd4bf;
+            --text-light: #f3f4f6;
+            --text-muted: #9ca3af;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            box-sizing: border-box;
+        }
+
+        /* HEADER / NAVBAR ATAS ALA WEB BERKELAS */
+        .top-navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: rgba(11, 19, 31, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-glass);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-accent);
+        }
+        .nav-btn-explore {
+            background-color: var(--primary-accent);
+            color: var(--bg-dark);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(45, 212, 191, 0.3);
+        }
+
+        /* HERO SECTION (COVER UTAMA) */
+        .hero-section {
+            height: 90vh;
+            background: linear-gradient(to bottom, rgba(11, 19, 31, 0.4), rgba(11, 19, 31, 0.95)), url('logo.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            border-bottom: 1px solid var(--border-glass);
+        }
+        .hero-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: #ffffff;
+            margin: 0 0 10px 0;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+        .hero-subtitle {
+            font-size: 0.95rem;
+            color: #ccfbf1;
+            max-width: 450px;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+        .hero-menu-pills {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .pill-btn {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-glass);
+            color: var(--text-light);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .pill-btn:hover {
+            border-color: var(--primary-accent);
+            color: var(--primary-accent);
+        }
+
+        /* SECTION KONTEN UMUM */
+        .container {
+            padding: 30px 15px;
+            max-width: 600px;
+            margin: auto;
+        }
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-accent);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-left: 4px solid var(--primary-accent);
+            padding-left: 10px;
+        }
+
+        /* KOTAK ABOUT US */
+        .about-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-glass);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        }
+        .about-card p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        /* KOTAK PENCARIAN */
+        .search-box {
+            margin-bottom: 20px;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 0.95rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border-glass);
+            color: white;
+            border-radius: 10px;
+            box-sizing: border-box;
+            outline: none;
+            backdrop-filter: blur(10px);
+        }
+        .search-box input::placeholder {
+            color: var(--text-muted);
+        }
+        .search-box input:focus {
+            border-color: var(--primary-accent);
+        }
+
+        /* KARTU MATERI */
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            border: 1px solid var(--border-glass);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        }
+        .card h3 {
+            margin-top: 0;
+            color: var(--primary-accent);
+            font-size: 1.15rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card h3 .arabic-title {
+            font-family: 'Traditional Arabic', 'Amiri', serif;
+            font-size: 1.3rem;
+            color: #5eead4;
+        }
+        .card .badge-def {
+            background-color: rgba(45, 212, 191, 0.1);
+            color: #5eead4;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            border: 1px solid rgba(45, 212, 191, 0.2);
+        }
+        .card p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #d1d5db;
+            margin: 8px 0;
+        }
+        .source-note {
+            margin-top: 12px;
+            padding-top: 8px;
+            border-top: 1px dashed rgba(255,255,255,0.1);
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+                /* TAB SECTION */
+        .content-section {
+            display: none;
+            padding-bottom: 80px;
+        }
+        .content-section.active {
+            display: block;
+        }
+
+        /* NAVIGASI BAWAH */
+        nav.bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(11, 19, 31, 0.95);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-around;
+            border-top: 1px solid var(--border-glass);
+            z-index: 1000;
+        }
+        nav.bottom-nav button {
+            background: none;
+            border: none;
+            padding: 14px 0;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            width: 33.33%;
+            cursor: pointer;
+        }
+        nav.bottom-nav button.active {
+            color: var(--primary-accent);
+            border-bottom: 3px solid var(--primary-accent);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR ATAS -->
+    <div class="top-navbar">
+        <div class="nav-links">
+            <a href="#home" class="active" onclick="switchTab('home')">Home</a>
+            <a href="#about" onclick="switchTab('about')">About</a>
+            <a href="#help" onclick="alert('Bantuan: Gunakan kolom pencarian di menu Ensiklopedia untuk mencari istilah Ulumul Qur’an dengan cepat.')">Help</a>
+        </div>
+        <a href="#ulumul" class="nav-btn-explore" onclick="switchTab('ulumul')">Mulai 🚀</a>
+    </div>
+
+    <!-- HALAMAN UTAMA / COVER (HOME & HERO) -->
+    <div id="section-home" class="content-section active">
+        <div class="hero-section">
+            <h1 class="hero-title">RDA QURAN STUDIO</h1>
+            <p class="hero-subtitle">Pusat Studi Al-Qur'an, Ensiklopedia Istilah, Tafsir Komprehensif, & Ilmu Tajwid.</p>
+            <div class="hero-menu-pills">
+                <button class="pill-btn" onclick="switchTab('ulumul')">📚 Ensiklopedia</button>
+                <button class="pill-btn" onclick="switchTab('tafsir')">📖 Kajian Tafsir</button>
+                <button class="pill-btn" onclick="switchTab('tajwid')">✨ Ilmu Tajwid</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section-title">Tentang Kami (About Us)</div>
+            <div class="about-card">
+                <p><strong>RDA Quran Studio</strong> adalah platform digital berbasis riset akademik yang dirancang khusus untuk memudahkan mahasiswa Program Studi Ilmu Al-Qur'an dan Tafsir (IAT) serta masyarakat umum dalam mendalami khazanah keilmuan Islam, mulai dari ensiklopedia istilah klasik hingga analisis tafsir tematik.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEKSI 1: ENSIKLOPEDIA ULUMUL QUR'AN (21 ISTILAH LENGKAP) -->
+    <div id="section-ulumul" class="container content-section">
+        <div class="section-title">Ensiklopedia Ulumul Qur'an</div>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px;">Istilah-istilah dasar muktabar pengantar studi Al-Qur'an.</p>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="🔍 Cari istilah (cth: Wahyu, Rasm, Tafsir)..." onkeyup="searchTerms()">
+        </div>
+
+        <div id="card-container">
+            <div class="card" data-title="al wahyu wahyu الوحي">
+                <h3><span>1. Al-Wahyu</span> <span class="arabic-title">الوَحْي</span></h3>
+                <div class="badge-def">📌 <strong>Definisi:</strong> Pemberitahuan Allah SWT secara tersembunyi dan cepat kepada hamba yang dipilih-Nya.</div>
+                <p><strong>Penjelasan:</strong> Wahyu merupakan fondasi utama penurunan Al-Qur'an melalui perantara Malaikat Jibril AS.</p>
+                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Mabāhits fī ‘Ulūm al-Qur’ān, Manna' al-Qhattan.</div>
+            </div>
+
+            <div class="card" data-title="asbabun nuzul asbabul nuzul أسباب النزول">
+                <h3><span>2. Asbabun Nuzul</span> <span class="arabic-title">أَسْبَابُ النُّزُوْل</span></h3>
+                <div class="badge-def">📌 <strong>Definisi:</strong> Latar belakang atau peristiwa historis penyebab turunnya ayat Al-Qur'an.</div>
+                <p><strong>Penjelasan:</strong> Penting untuk memahami konteks historis penafsiran hukum agar tidak terjadi salah paham.</p>
+                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Al-Itqān fī ‘Ulūm al-Qur’ān, Jalaluddin As-Suyuthi.</div>
+            </div>
+
+            <div class="card" data-title="makkiyah المكية">
+                <h3><span>3. Makkiyah</span> <span class="arabic-title">المَكِّيَّة</span></h3>
+                <div class="badge-def">📌 <strong>Definisi:</strong> Ayat yang diturunkan sebelum Nabi Muhammad SAW berhijrah ke Madinah.</div>
+                <p><strong>Penjelasan:</strong> Berfokus pada penanaman akidah, tauhid, keimanan, serta ajakan moral universal.</p>
+                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Mabāhits fī ‘Ulūm al-Qur’ān, Manna' al-Qhattan.</div>
+            </div>
+
+            <div class="card" data-title="madaniyah المدنية">
+                <h3><span>4. Madaniyah</span> <span class="arabic-title">المَدَنِيَّة</span></h3>
+                <div class="badge-def">📌 <strong>Definisi:</strong> Ayat yang diturunkan setelah peristiwa hijrah ke Madinah.</div>
+                <p><strong>Penjelasan:</strong> Banyak memuat ketentuan hukum syariat, muamalah, dan tata kelola masyarakat.</p>
+                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Mabāhits fī ‘Ulūm al-Qur’ān, Manna' al-Qhattan.</div>
+            </div>
+
+            <div class="card" data-title="jam'ul qur'an pengumpulan al-qur'an جمع القرآن">
+                <h3><span>5. Jam'ul Qur'an</span> <span class="arabic-title">جَمْعُ القُرْآن</span></h3>
+                <div class="badge-def">📌 <strong>Definisi:</strong> Proses pengumpulan, penghafalan, dan pembukuan mushaf Al-Qur'an.</div>
+                <p><strong>Penjelasan:</strong> Meliputi fase masa Nabi, Abu Bakar, hingga standardisasi mushaf Utsman bin Affan.</p>
+                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Al-Burhān fī ‘Ulūm al-Qur’ān, Al-Zarkasyi.</div>
+            </div>
+
+            <div class="card" data-title="rasm usmani uthmani الرسم العثماني">
+                <h3><span>6. Rasm Usmani</span> <span class="arabic-title">الرَّسْمُ العُثْمَانِي</span></h3>
+                <div class="badge-def">📌 <strong>Definisi:</strong> Tata cara penulisan kata-kata Al-Qur'an standar masa Khalifah Utsman.</div>
+                <p><strong>Penjelasan:</strong> Menjadi acuan resmi penulisan mushaf di seluruh dunia hingga saat ini.</p>
+                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Mabāhits fī ‘Ulūm al-Qur’ān, Manna' al-Qhattan.</div>
+            </div>
+
+            <div class="card" data-title="al ahruf as sab'ah sabah الأحرف السبعة">
+                <h3><span>7. Al-Ahruf As-Sab'ah</span> <span class="arabic-title">الأَحْرُفُ السَّبْعَة</span></h3>
+                <div class="badge-def">📌 <strong>Definisi:</strong> Tujuh variasi dialek bahasa Arab dalam penurunan Al-Qur'an.</div>
+                <p><strong>Penjelasan:</strong> Kemudahan dari Allah bagi berbagai suku Arab untuk membaca Al-Qur'an.</p>
+                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Al-Itqān fī ‘Ulūm al-Qur’ān, Jalaluddin As-Suyuthi.</div>
+            </div>
+
+            <div class="card" data-title="al qira'at qiraat qiroat القراءات">
+                <h3><span>8. Al-Qira'at</span> <span class="arabic-title">القِرَاءَات</span></h3>
+                <div class="badge-def">📌 <strong>Definisi:</strong> Mazhab cara membaca teks Al-Qur'an oleh para imam qurra' bersanad mutawatir.</div>
+                <p><strong>Penjelasan:</strong> Contohnya Qira'at Sab'ah seperti riwayat Hafs dari Imam Asim.</p>
+                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Al-Burhān fī ‘Ulūm al-Qur’ān, Al-Zarkasyi.</div>
+            </div>
+
+            <div class="card" data-title="mutawatir المتواتر">
+                <h3><span>9. Mutawatir</span> <span class="arabic-title">المُتَوَاتِر</span></h3>
+                <div class="badge-def">📌 <strong>Definisi:</strong> Periwayatan oleh banyak perawi di setiap tingkat yang mustahil sepakat bohong.</div>
+                <p><strong>Penjelasan:</strong> Menjamin keautentikan mutlak teks Al-Qur'an sejak masa Nabi.</p>
+                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Mabāhits fī ‘Ulūm al-Qur’ān, Manna' al-Qhattan.</div>
+            </div>
+
+            <div class="card" data-title="syadzdzah syadzah الشاذة">
+                <h3><span>10. Syadzdzah</span> <span class="arabic-title">الشَّاذَّة</span></h3>
+                <div class="badge-def">📌 <strong>Definisi:</strong> Bacaan qira'at yang tidak memenuhi syarat kesahihan mutawatir.</div>
+                <p><strong>Penjelasan:</strong> Tidak digunakan untuk shalat, namun dipakai sebagian ulama untuk penjelasan tafsir.</p>
+                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Al-Itqān fī ‘Ulūm al-Qur’ān, Jalaluddin As-Suyuthi.</div>
+            </div>
+
+            <div class="card" data-title="muhkam المحكم">
+                <h3><span>11. Muhkam</span> <span class="arabic-title">المُحْكَم</span></h3>
+                <div class="badge-def">📌 <strong>Definisi:</strong> Ayat yang sudah sangat jelas maknanya dan mudah dipahami.</div>
+                <p><strong>Penjelasan:</strong> Menjadi prinsip utama atau induk hukum dalam syariat Islam.</p>
+                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Mabāhits fī ‘Ulūm al-Qur’ān, Manna' al-Qhattan.</div>
+            </div>
+
+            <div class="card" data-title="mutasyabih المتشابه">
+                <h3><span>12. Mutasyabih</span> <span class="arabic-title">المُتَشَابِه</span></h3>
+                <div class="badge-def">📌 <strong>Definisi:</strong> Ayat yang maknanya samar atau membutuhkan kajian mendalam.</div>
+                <p><strong>Penjelasan:</strong> Seperti huruf-huruf potongan di awal surah (*fawatihussuwar*).</p>
+                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Al-Burhān fī ‘Ulūm al-Qur’ān, Al-Zarkasyi.</div>
+            </div>
+
+            <div class="card" data-title="nasikh الناسخ">
+                <h3><span>13. Nasikh</span> <span class="arabic-title">النَّاسِخ</span></h3>
+                <div class="badge-def">📌 <strong>Definisi:</strong> Dalil syariat yang menghapus atau mengganti hukum sebelumnya.</div>
+                <p><strong>Penjelasan:</strong> Bagian dari tahapan hukum Islam sesuai kemaslahatan umat.</p>
+                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Mabāhits fī ‘Ulūm al-Qur’ān, Manna' al-Qhattan.</div>
+            </div>
+
+            <div class="card" data-title="mansukh المنسوخ">
+                <h3><span>14. Mansukh</span> <span class="arabic-title">المَنْسُوْخ</span></h3>
+                <div class="badge-def">📌 <strong>Definisi:</strong> Hukum lama yang telah dihapus oleh ketentuan dalil nasikh.</div>
+                <p><strong>Penjelasan:</strong> Penting dipahami agar mufassir tidak menerapkan hukum yang sudah diganti.</p>
+                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Al-Itqān fī ‘Ulūm al-Qur’ān, Jalaluddin As-Suyuthi.</div>
+            </div>
+
+            <div class="card" data-title="am umum العام">
+                <h3><span>15. 'Am</span> <span class="arabic-title">العَام</span></h3>
+                <div class="badge-def">📌 <strong>Definisi:</strong> Lafaz yang mencakup seluruh satuan tanpa pembatasan jumlah.</div>
+                <p><strong>Penjelasan:</strong> Berlaku umum kecuali dikhususkan oleh dalil lain (*khas*).</p>
+                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Mabāhits fī ‘Ulūm al-Qur’ān, Manna' al-Qhattan.</div>
+            </div>
+
+            <div class="card" data-title="khas khusus الخاص">
+                <h3><span>16. Khas</span> <span class="arabic-title">الخَاص</span></h3>
+                <div class="badge-def">📌 <strong>Definisi:</strong> Lafaz yang menunjukkan arti khusus pada individu atau kelompok tertentu.</div>
+                <p><strong>Penjelasan:</strong> Berfungsi membatasi keumuman lafaz *'am*.</p>
+                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Al-Burhān fī ‘Ulūm al-Qur’ān, Al-Zarkasyi.</div>
+            </div>
+
+            <div class="card" data-title="muthlaq mutlaq المطلق">
+                <h3><span>17. Muthlaq</span> <span class="arabic-title">المُطْلَق</span></h3>
+                <div class="badge-def">📌 <strong>Definisi:</strong> Lafaz yang menunjukkan hakikat sesuatu tanpa syarat ikatan.</div>
+                <p><strong>Penjelasan:</strong> Dipahami mutlak selama tidak ada pembatas (*muqayyad*).</p>
+                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Mabāhits fī ‘Ulūm al-Qur’ān, Manna' al-Qhattan.</div>
+            </div>
+            <div class="card" data-title="muqayyad المقيد">
+                <h3><span>18. Muqayyad</span> <span class="arabic-title">المُقَيَّد</span></h3>
+                <div class="badge-def">📌 <strong>Definisi:</strong> Lafaz yang dibatasi oleh sifat atau syarat tertentu.</div>
+                <p><strong>Penjelasan:</strong> Memberikan batasan spesifik terhadap lafaz muthlaq.</p>
+                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Al-Itqān fī ‘Ulūm al-Qur’ān, Jalaluddin As-Suyuthi.</div>
+            </div>
+
+            <div class="card" data-title="tafsir التفسير">
+                <h3><span>19. Tafsir</span> <span class="arabic-title">التَّفْسِيْر</span></h3>
+                <div class="badge-def">📌 <strong>Definisi:</strong> Ilmu untuk memahami kitab Allah dan menjelaskan makna hukumnya.</div>
+                <p><strong>Penjelasan:</strong> Berfokus pada penjelasan makna zahir dan konteks kebahasaan.</p>
+                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Al-Burhān fī ‘Ulūm al-Qur’ān, Al-Zarkasyi.</div>
+            </div>
+
+            <div class="card" data-title="ta'wil tawil التأويل">
+                <h3><span>20. Ta'wil</span> <span class="arabic-title">التَّأْوِيْل</span></h3>
+                <div class="badge-def">📌 <strong>Definisi:</strong> Memalingkan makna zahir ke makna batin berdasarkan dalil.</div>
+                <p><strong>Penjelasan:</strong> Memerlukan kedalaman ilmu agar tetap dalam koridor syariat.</p>
+                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Mabāhits fī ‘Ulūm al-Qur’ān, Manna' al-Qhattan.</div>
+            </div>
+
+            <div class="card" data-title="i'jazul qur'an ijaz keajaiban إعجاز القرآن">
+                <h3><span>21. I'jazul Qur'an</span> <span class="arabic-title">إِعْجَازُ القُرْآن</span></h3>
+                <div class="badge-def">📌 <strong>Definisi:</strong> Kemukjizatan Al-Qur'an yang melemahkan penantangnya.</div>
+                <p><strong>Penjelasan:</strong> Terpancar dari keindahan bahasa, hukum, dan isyarat ilmiah.</p>
+                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Al-Itqān fī ‘Ulūm al-Qur’ān, Jalaluddin As-Suyuthi.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEKSI 2: KAJIAN TAFSIR -->
+    <div id="section-tafsir" class="container content-section">
+        <div class="section-title">Kajian Tafsir Al-Qur'an</div>
+        <div class="card">
+            <h3>Komparasi & Pemetaan Tafsir</h3>
+            <div class="badge-def">📌 <strong>Fokus Studi:</strong> Tafsir Tematik & Maqāṣidī</div>
+            <p>Halaman ini dikembangkan untuk menampilkan pendekatan kontemporer dalam memahami pesan universal Al-Qur'an sesuai konteks kekinian.</p>
+            <div class="source-note">📚 <strong>Referensi:</strong> Tafsir Al-Mishbah & Literatur Maqāṣidī.</div>
+        </div>
+    </div>
+
+    <!-- SEKSI 3: ILMU TAJWID -->
+    <div id="section-tajwid" class="container content-section">
+        <div class="section-title">Ilmu Tajwid & Makharijul Huruf</div>
+        <div class="card">
+            <h3>Kaidah Pembacaan Al-Qur'an</h3>
+            <div class="badge-def">📌 <strong>Fokus Materi:</strong> Makharij, Sifat Huruf, & Ahkamu Nun Sakinah</div>
+            <p>Modul tambahan untuk mempelajari tata cara melafalkan ayat suci Al-Qur'an secara tartil sesuai standar qira'at yang sahih.</p>
+            <div class="source-note">📚 <strong>Referensi:</strong> Hidayatul Mustafid & Kitab Tajwid Standar.</div>
+        </div>
+    </div>
+
+    <!-- NAVIGASI BAWAH (TAB UTAMA) -->
+    <nav class="bottom-nav">
+        <button id="btn-home" class="active" onclick="switchTab('home')">🏠 Beranda</button>
+        <button id="btn-ulumul" onclick="switchTab('ulumul')">📚 Ensiklopedia</button>
+        <button id="btn-tafsir" onclick="switchTab('tafsir')">📖 Tafsir & Tajwid</button>
+    </nav>
+
+    <!-- SCRIPT JAVASCRIPT -->
+       <script>
+        function switchTab(tabName) {
+            // Sembunyikan semua seksi
+            document.getElementById('section-home').classList.remove('active');
+            document.getElementById('section-ulumul').classList.remove('active');
+            document.getElementById('section-tafsir').classList.remove('active');
+            document.getElementById('section-tajwid').classList.remove('active');
+
+            // Nonaktifkan semua tombol navigasi bawah
+            document.getElementById('btn-home').classList.remove('active');
+            document.getElementById('btn-ulumul').classList.remove('active');
+            document.getElementById('btn-tafsir').classList.remove('active');
+
+            // Aktifkan berdasarkan pilihan
+            if(tabName === 'home') {
+                document.getElementById('section-home').classList.add('active');
+                document.getElementById('btn-home').classList.add('active');
+                window.scrollTo(0, 0);
+            } else if(tabName === 'ulumul') {
+                document.getElementById('section-ulumul').classList.add('active');
+                document.getElementById('btn-ulumul').classList.add('active');
+                window.scrollTo(0, 0);
+            } else if(tabName === 'tafsir') {
+                document.getElementById('section-tafsir').classList.add('active');
+                document.getElementById('section-tajwid').classList.add('active');
+                document.getElementById('btn-tafsir').classList.add('active');
+                window.scrollTo(0, 0);
+            }
+        }
+
+        // Fungsi Pencarian yang Aman (Anti-Error Null)
+        function searchTerms() {
+            let inputField = document.getElementById('searchInput');
+            if (!inputField) return;
+            
+            let input = inputField.value.toLowerCase();
+            let cards = document.getElementsByClassName('card');
+
+            for (let i = 0; i < cards.length; i++) {
+                let title = cards[i].getAttribute('data-title');
+                // Pastikan atribut title ada sebelum dibaca
+                let titleText = title ? title.toLowerCase() : "";
+                let contentText = cards[i].innerText.toLowerCase();
+                
+                if (titleText.includes(input) || contentText.includes(input)) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+
+</body>
+</html>
