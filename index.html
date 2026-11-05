@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -16,6 +16,7 @@
             background-color: #0b130e;
             color: #e0e6e3;
             line-height: 1.6;
+            padding-bottom: 50px;
         }
 
         /* NAVBAR ATAS */
@@ -32,7 +33,7 @@
         }
 
         .logo-text {
-            font-size: 1.05rem;
+            font-size: 1rem;
             font-weight: 800;
             color: #52b788;
             letter-spacing: 1px;
@@ -43,8 +44,8 @@
         .nav-links a {
             color: #b0bec5;
             text-decoration: none;
-            margin-left: 10px;
-            font-size: 0.8rem;
+            margin-left: 8px;
+            font-size: 0.75rem;
             cursor: pointer;
         }
 
@@ -64,7 +65,7 @@
         .hero {
             background: linear-gradient(180deg, rgba(11, 19, 14, 0.75) 0%, rgba(11, 19, 14, 0.98) 100%), 
                 url('banner-rda.jpg') center/cover no-repeat;
-            padding: 60px 20px 40px 20px;
+            padding: 50px 16px 35px 16px;
             text-align: center;
         }
 
@@ -73,64 +74,65 @@
             background: rgba(82, 183, 136, 0.15);
             color: #74c69d;
             border: 1px solid rgba(82, 183, 136, 0.3);
-            padding: 5px 12px;
+            padding: 4px 10px;
             border-radius: 20px;
-            font-size: 0.75rem;
-            margin-bottom: 15px;
+            font-size: 0.7rem;
+            margin-bottom: 12px;
         }
 
         .hero h1 {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             color: #ffffff;
             font-weight: 800;
             margin-bottom: 6px;
         }
 
         .hero h2 {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #b7e4c7;
             font-weight: 400;
-            margin-bottom: 22px;
+            margin-bottom: 18px;
         }
 
         .hero-btn {
             display: inline-block;
             background-color: #2d6a4f;
             color: white;
-            padding: 10px 22px;
+            padding: 8px 18px;
             border-radius: 25px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             box-shadow: 0 4px 15px rgba(45, 106, 79, 0.4);
         }
 
         .main-container {
             max-width: 900px;
             margin: 0 auto;
-            padding: 30px 16px;
+            padding: 24px 16px;
         }
 
         .section-title {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: #ffffff;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.8px;
-            margin-bottom: 18px;
+            margin-bottom: 14px;
         }
 
         .cards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 14px;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+            margin-bottom: 24px;
         }
 
         .card {
             background: linear-gradient(145deg, #132219, #0e1a13);
             border: 1px solid rgba(82, 183, 136, 0.2);
             border-radius: 12px;
-            padding: 16px;
+            padding: 14px;
             cursor: pointer;
             transition: 0.2s;
         }
@@ -141,40 +143,63 @@
         }
 
         .card h3 {
-            font-size: 0.95rem;
+            font-size: 0.88rem;
             color: #74c69d;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
 
         .card p {
-            font-size: 0.78rem;
+            font-size: 0.73rem;
             color: #9ab0a3;
         }
         .focus-section {
-            margin-top: 35px;
             background: linear-gradient(90deg, rgba(11, 19, 14, 0.92) 0%, rgba(19, 34, 25, 0.85) 100%), 
                 url('banner-rda.jpg') center/cover no-repeat;
             border: 1px solid rgba(82, 183, 136, 0.2);
             border-radius: 14px;
-            padding: 22px;
+            padding: 18px;
+            margin-bottom: 24px;
         }
 
         .focus-section h3 {
             color: #52b788;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
 
         .focus-section h2 {
-            font-size: 1.15rem;
+            font-size: 1.05rem;
             color: #ffffff;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .focus-section p {
-            font-size: 0.82rem;
+            font-size: 0.78rem;
             color: #c2d5c9;
+        }
+
+        /* ABOUT US CARD (TENTANG KAMI DI BERANDA) */
+        .about-box {
+            background: #132219;
+            border: 1px solid rgba(82, 183, 136, 0.25);
+            border-radius: 12px;
+            padding: 18px;
+            margin-top: 20px;
+        }
+
+        .about-box h3 {
+            color: #74c69d;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .about-box p {
+            font-size: 0.78rem;
+            color: #c2d5c9;
+            margin-bottom: 8px;
         }
 
         .content-header {
@@ -190,9 +215,9 @@
             background: rgba(82, 183, 136, 0.15);
             color: #74c69d;
             border: 1px solid rgba(82, 183, 136, 0.3);
-            padding: 6px 14px;
+            padding: 6px 12px;
             border-radius: 20px;
-            font-size: 0.78rem;
+            font-size: 0.75rem;
             cursor: pointer;
             text-decoration: none;
         }
@@ -209,8 +234,8 @@
             border: 1px solid rgba(82, 183, 136, 0.3);
             border-radius: 8px;
             color: #ffffff;
-            font-size: 0.9rem;
-            margin-bottom: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 16px;
             outline: none;
         }
 
@@ -239,18 +264,18 @@
         .term-title {
             font-weight: 700;
             color: #74c69d;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             margin-bottom: 2px;
         }
 
         .term-desc {
-            font-size: 0.82rem;
+            font-size: 0.78rem;
             color: #d1e7dd;
             margin-bottom: 6px;
         }
 
         .term-source {
-            font-size: 0.72rem;
+            font-size: 0.7rem;
             color: #8fa89b;
             font-style: italic;
             border-top: 1px dashed rgba(82, 183, 136, 0.2);
@@ -259,11 +284,11 @@
 
         .footer {
             text-align: center;
-            padding: 25px 16px;
-            font-size: 0.78rem;
+            padding: 20px 16px;
+            font-size: 0.75rem;
             color: #6c757d;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
-            margin-top: 35px;
+            margin-top: 30px;
         }
     </style>
 </head>
@@ -279,7 +304,7 @@
         </nav>
     </header>
 
-    <!-- HALAMAN BERANDA -->
+    <!-- ================= HALAMAN BERANDA (BERSIH & TENTANG KAMI) ================= -->
     <div id="page-home" class="page-section active">
         <section class="hero">
             <div class="tagline-badge">📖 Pusat Studi & Ensiklopedia Al-Qur'an Digital</div>
@@ -289,56 +314,63 @@
         </section>
 
         <main class="main-container" id="menu-utama">
-            <div class="section-title">Aplikasi Kami untuk Membantu Pemula</div>
+            <div class="section-title">Menu Utama Studi</div>
             <div class="cards-grid">
                 <div class="card" onclick="switchPage('ensiklopedia')">
-                    <h3>📖 Ensiklopedia Maba</h3>
-                    <p>Kamus praktis berisi istilah penting dalam Ulumul Qur'an.</p>
+                    <h3>📖 Ensiklopedia</h3>
+                    <p>Kamus 51 istilah penting Ulumul Qur'an & Tafsir.</p>
                 </div>
                 <div class="card" onclick="switchPage('tafsir')">
                     <h3>🔍 Pengantar Tafsir</h3>
-                    <p>Mengenal metode-metode dasar penafsiran Al-Qur'an.</p>
+                    <p>Mengenal metode dasar penafsiran Al-Qur'an.</p>
                 </div>
                 <div class="card" onclick="switchPage('tajwid')">
-                    <h3>✨ Dasar Ilmu Tajwid</h3>
-                    <p>Panduan ringkas hukum bacaan dan pengucapan huruf.</p>
+                    <h3>✨ Dasar Tajwid</h3>
+                    <p>Panduan ringkas hukum bacaan Al-Qur'an.</p>
                 </div>
                 <div class="card" onclick="switchPage('klasik')">
                     <h3>📚 Istilah Pesantren</h3>
-                    <p>Membantu mengenali istilah khas dalam tradisi keilmuan teks.</p>
+                    <p>Mengenal istilah khas keilmuan teks klasik.</p>
                 </div>
             </div>
 
             <div class="focus-section">
                 <h3>FOKUS STUDI</h3>
                 <h2>Data, Teks, & Kontekstual. Bekerja Bersama.</h2>
-                <p>RDA Quran Studio dirancang khusus untuk membantu mengkaji istilah-istilah keagamaan secara praktis dan cepat.</p>
+                <p>Rda Quran Studio dirancang khusus untuk membantu mengkaji istilah keagamaan secara praktis dan cepat.</p>
+            </div>
+
+            <!-- TENTANG KAMI (ABOUT US DI HALAMAN UTAMA) -->
+            <div class="about-box">
+                <h3>Tentang Kami (About Us)</h3>
+                <p><strong>RDA Quran Studio</strong> adalah platform digital berbasis riset akademik yang dirancang khusus untuk memudahkan mahasiswa serta masyarakat umum dalam mendalami khazanah keilmuan Islam, mulai dari ensiklopedia istilah klasik hingga analisis tafsir tematik.</p>
+                <p style="margin-bottom: 0; color: #9ab0a3; font-size: 0.73rem;">Dibangun dengan komitmen menyajikan referensi literatur Islam yang kredibel, ringkas, dan mudah diakses langsung melalui perangkat seluler.</p>
             </div>
         </main>
     </div>
-        <!-- HALAMAN ENSIKLOPEDIA MABA (51 ISTILAH LENGKAP) -->
+        <!-- ================= HALAMAN ENSIKLOPEDIA (TERPISAH & ADA PENCARIAN) ================= -->
     <div id="page-ensiklopedia" class="page-section">
         <div class="main-container">
             <div class="content-header">
-                <h2 style="color: #ffffff; font-size: 1.1rem;">📖 Ensiklopedia Maba</h2>
-                <a class="back-btn" onclick="switchPage('home')">← Kembali ke Beranda</a>
+                <h2 style="color: #ffffff; font-size: 1.05rem;">📖 Ensiklopedia Ulumul Qur'an</h2>
+                <a class="back-btn" onclick="switchPage('home')">← Beranda</a>
             </div>
             
-            <input type="text" id="searchInput" class="search-box" placeholder="🔍 Cari 51 istilah Ulumul Qur'an & Tafsir..." onkeyup="searchTerms()">
+            <input type="text" id="searchInput" class="search-box" placeholder="🔍 Cari 51 istilah (Cth: Asbabun Nuzul)..." onkeyup="searchTerms()">
 
             <div id="termList">
                 <div class="term-item">
                     <div class="term-arabic">أسباب النزول</div>
                     <div class="term-title">Asbabun Nuzul</div>
                     <div class="term-desc">Peristiwa atau latar belakang historis yang mendasari turunnya suatu ayat atau beberapa ayat Al-Qur'an.</div>
-                    <div class="term-source">Sumber: Al-Itqan fi Ulum al-Qur'an (Imam al-Suyuthi) & Al-Burhan fi Ulum al-Qur'an (Badruddin al-Zarkasyi).</div>
+                    <div class="term-source">Sumber: Al-Itqan fi Ulum al-Qur'an (Imam al-Suyuthi) & Al-Burhan (Badruddin al-Zarkasyi).</div>
                 </div>
 
                 <div class="term-item">
                     <div class="term-arabic">مناسبة</div>
                     <div class="term-title">Munasabah</div>
                     <div class="term-desc">Korelasi, hubungan, atau kesinambungan makna antara ayat dengan ayat, atau surah dengan surah dalam Al-Qur'an.</div>
-                    <div class="term-source">Sumber: Asrar al-Takrar fi al-Qur'an (Al-Kirmani) & Nazm al-Durar (Al-Biqa'i).</div>
+                    <div class="term-source">Sumber: Asrar al-Takrar (Al-Kirmani) & Nazm al-Durar (Al-Biqa'i).</div>
                 </div>
 
                 <div class="term-item">
@@ -373,14 +405,14 @@
                     <div class="term-arabic">ناسخ</div>
                     <div class="term-title">Nasikh</div>
                     <div class="term-desc">Dalil syariat yang datang belakangan untuk menghapus atau mengganti hukum syariat yang datang sebelumnya.</div>
-                    <div class="term-source">Sumber: Al-Nasikh wa al-Mansukh fi al-Qur'an al-Karim (Ibnu Hazm / Abu Ubaid).</div>
+                    <div class="term-source">Sumber: Al-Nasikh wa al-Mansukh fi al-Qur'an (Ibnu Hazm).</div>
                 </div>
 
                 <div class="term-item">
                     <div class="term-arabic">منسوخ</div>
                     <div class="term-title">Mansukh</div>
                     <div class="term-desc">Hukum syariat terdahulu yang telah dihapus atau digantikan keberlakuannya oleh dalil hukum nasikh.</div>
-                    <div class="term-source">Sumber: Al-Nasikh wa al-Mansukh (Imam al-Hafiz Ibnu Arabi).</div>
+                    <div class="term-source">Sumber: Al-Nasikh wa al-Mansukh (Imam Ibnu Arabi).</div>
                 </div>
 
                 <div class="term-item">
@@ -394,14 +426,14 @@
                     <div class="term-arabic">متشابه</div>
                     <div class="term-title">Mutasyabih</div>
                     <div class="term-desc">Ayat-ayat yang maknanya samar, mendalam, atau hanya Allah yang mengetahui hakikat kepastian maknanya secara mutlak.</div>
-                    <div class="term-source">Sumber: Ta'wil Musykil al-Qur'an (Imam Ibnu Qutaibah).</div>
+                    <div class="term-source">Sumber: Ta'wil Musykil al-Qur'an (Ibnu Qutaibah).</div>
                 </div>
 
                 <div class="term-item">
                     <div class="term-arabic">إجاز القرآن</div>
                     <div class="term-title">I'jazul Qur'an</div>
                     <div class="term-desc">Aspek kelemahan manusia dalam menandingi kemukjizatan Al-Qur'an baik dari segi kebahasaan, hukum, maupun sains.</div>
-                    <div class="term-source">Sumber: I'jaz al-Qur'an (Al-Baqillani) & Al-Mu'jiz al-Kubro (Muhammad Abduh).</div>
+                    <div class="term-source">Sumber: I'jaz al-Qur'an (Al-Baqillani).</div>
                 </div>
 
                 <div class="term-item">
@@ -414,8 +446,8 @@
                 <div class="term-item">
                     <div class="term-arabic">فضائل القرآن</div>
                     <div class="term-title">Fadhailul Qur'an</div>
-                    <div class="term-desc">Kajian mengenai keutamaan membaca, menghafal, dan mengamalkan surah-surah atau ayat-ayat tertentu dalam Al-Qur'an.</div>
-                    <div class="term-source">Sumber: Kitab Fadhail al-Qur'an (Abu Ubaid al-Qasim bin Salam).</div>
+                    <div class="term-desc">Kajian mengenai keutamaan membaca, menghafal, dan mengamalkan surah-surah atau ayat tertentu dalam Al-Qur'an.</div>
+                    <div class="term-source">Sumber: Kitab Fadhail al-Qur'an (Abu Ubaid al-Qasim).</div>
                 </div>
 
                 <div class="term-item">
@@ -442,7 +474,7 @@
                 <div class="term-item">
                     <div class="term-arabic">فواتح السور</div>
                     <div class="term-title">Fawatihussuwar</div>
-                    <div class="term-desc">Kajian khusus mengenai pembuka-pembuka surah dalam Al-Qur'an, termasuk huruf muqatta'ah (seperti Alif Lam Mim).</div>
+                    <div class="term-desc">Kajian khusus mengenai pembuka-pembuka surah dalam Al-Qur'an, termasuk huruf muqatta'ah.</div>
                     <div class="term-source">Sumber: Al-Bayan fi Fawatih al-Suwar (Makhluf al-Minyawi).</div>
                 </div>
 
@@ -457,7 +489,7 @@
                     <div class="term-arabic">عام</div>
                     <div class="term-title">'Aam</div>
                     <div class="term-desc">Lafal atau ungkapan yang mencakup seluruh satuan atau individu yang sesuai dengan makna lafal tersebut tanpa pembatasan.</div>
-                    <div class="term-source">Sumber: Al-Mustasfa min Ilm al-Usul (Imam al-Ghazali) & Al-Wajiz fi Usul al-Fiqh (Abdul Karim Zaidan).</div>
+                    <div class="term-source">Sumber: Al-Mustasfa min Ilm al-Usul (Imam al-Ghazali).</div>
                 </div>
 
                 <div class="term-item">
@@ -470,14 +502,14 @@
                 <div class="term-item">
                     <div class="term-arabic">مطلق</div>
                     <div class="term-title">Muthlaq</div>
-                    <div class="term-desc">Lafal yang menunjukkan pada hakikat suatu benda secara umum tanpa ikatan pembatas tertentu (sifat atau syarat).</div>
+                    <div class="term-desc">Lafal yang menunjukkan pada hakikat suatu benda secara umum tanpa ikatan pembatas tertentu.</div>
                     <div class="term-source">Sumber: Al-Luma' fi Usul al-Fiqh (Imam Syirazi).</div>
                 </div>
 
                 <div class="term-item">
                     <div class="term-arabic">مقيد</div>
                     <div class="term-title">Muqayyad</div>
-                    <div class="term-desc">Lafal yang menunjukkan suatu makna tertentu yang telah diikat atau dibatasi oleh sifat, syarat, atau ketentuan khusus.</div>
+                    <div class="term-desc">Lafal yang menunjukkan suatu makna tertentu yang telah diikat atau dibatasi oleh sifat atau syarat khusus.</div>
                     <div class="term-source">Sumber: Al-Wajiz fi Usul al-Fiqh (Abdul Karim Zaidan).</div>
                 </div>
 
@@ -485,76 +517,76 @@
                     <div class="term-arabic">منطوق</div>
                     <div class="term-title">Mantuq</div>
                     <div class="term-desc">Makna tersurat atau penunjukan hukum yang secara langsung diucapkan oleh teks dalil (nash).</div>
-                    <div class="term-source">Sumber: Irshad al-Fuhul ila Ilm al-Haq (Imam al-Syaukani).</div>
+                    <div class="term-source">Sumber: Irshad al-Fuhul (Imam al-Syaukani).</div>
                 </div>
 
                 <div class="term-item">
                     <div class="term-arabic">مفهوم</div>
                     <div class="term-title">Mafhum</div>
                     <div class="term-desc">Makna tersirat atau pemahaman hukum yang tidak diucapkan secara langsung oleh teks tetapi dapat dipahami secara logis.</div>
-                    <div class="term-source">Sumber: Al-Mustasfa min Ilm al-Usul (Imam al-Ghazali).</div>
+                    <div class="term-source">Sumber: Al-Mustasfa (Imam al-Ghazali).</div>
                 </div>
 
                 <div class="term-item">
                     <div class="term-arabic">مفهوم موافقة</div>
                     <div class="term-title">Mafhum Muwafaqah</div>
-                    <div class="term-desc">Pemahaman di mana hukum kasus yang tidak disebutkan sama (atau lebih utama) dengan hukum kasus yang disebutkan dalam teks.</div>
-                    <div class="term-source">Sumber: Al-Bahr al-Muhith fi Usul al-Fiqh (Badruddin al-Zarkasyi).</div>
+                    <div class="term-desc">Pemahaman di mana hukum kasus yang tidak disebutkan sama dengan hukum kasus yang disebutkan dalam teks.</div>
+                    <div class="term-source">Sumber: Al-Bahr al-Muhith (Badruddin al-Zarkasyi).</div>
                 </div>
 
                 <div class="term-item">
                     <div class="term-arabic">مفهوم مخالفة</div>
                     <div class="term-title">Mafhum Mukhalafah</div>
                     <div class="term-desc">Pemahaman kebalikan, di mana hukum suatu kasus yang tidak disebutkan berlawanan dengan hukum kasus yang disebutkan.</div>
-                    <div class="term-source">Sumber: Rawdhat al-Nadhir wa Junnat al-Munadhir (Ibnu Qudamah).</div>
+                    <div class="term-source">Sumber: Rawdhat al-Nadhir (Ibnu Qudamah).</div>
                 </div>
 
                 <div class="term-item">
                     <div class="term-arabic">حقيقة</div>
                     <div class="term-title">Haqiqah</div>
-                    <div class="term-desc">Penggunaan lafal atau kosakata sesuai dengan makna aslinya secara bahasa tanpa ada unsur metafora atau pergeseran arti.</div>
+                    <div class="term-desc">Penggunaan lafal atau kosakata sesuai dengan makna aslinya secara bahasa tanpa unsur metafora.</div>
                     <div class="term-source">Sumber: Al-Mustasfa (Imam al-Ghazali).</div>
                 </div>
 
                 <div class="term-item">
                     <div class="term-arabic">مجاز</div>
                     <div class="term-title">Majaz</div>
-                    <div class="term-desc">Penggunaan lafal di luar makna aslinya karena adanya hubungan keserupaan (metafora/kiasan) disertai indikator tertentu.</div>
+                    <div class="term-desc">Penggunaan lafal di luar makna aslinya karena adanya hubungan keserupaan (metafora/kiasan).</div>
                     <div class="term-source">Sumber: Dalail al-I'jaz (Abdul Qahir al-Jurjani).</div>
                 </div>
 
                 <div class="term-item">
                     <div class="term-arabic">صريح</div>
                     <div class="term-title">Sharih</div>
-                    <div class="term-desc">Ungkapan atau lafal yang secara terang-terangan dan jelas menunjuk pada maksud tujuannya tanpa perlu takwil lain.</div>
-                    <div class="term-source">Sumber: Usul al-Sarakhsi (Imam Syamsuddin al-Sarakhsi).</div>
+                    <div class="term-desc">Ungkapan atau lafal yang secara terang-terangan dan jelas menunjuk pada maksud tujuannya tanpa takwil lain.</div>
+                    <div class="term-source">Sumber: Usul al-Sarakhsi (Imam al-Sarakhsi).</div>
                 </div>
 
                 <div class="term-item">
                     <div class="term-arabic">كناية</div>
                     <div class="term-title">Kinayah</div>
-                    <div class="term-desc">Lafal yang digunakan untuk menyindir atau menyatakan suatu makna secara tidak langsung melalui bayangan arti tertentu.</div>
+                    <div class="term-desc">Lafal yang digunakan untuk menyindir atau menyatakan suatu makna secara tidak langsung melalui bayangan arti.</div>
                     <div class="term-source">Sumber: Al-Idhah fi Ulum al-Balaghah (Al-Khatib al-Qazwini).</div>
                 </div>
 
                 <div class="term-item">
                     <div class="term-arabic">مجمل</div>
                     <div class="term-title">Mujmal</div>
-                    <div class="term-desc">Lafal yang maknanya masih global, samar, atau belum jelas rinciannya sehingga membutuhkan penjelas dari dalil lain.</div>
+                    <div class="term-desc">Lafal yang maknanya masih global, samar, atau belum jelas rinciannya sehingga butuh penjelas lain.</div>
                     <div class="term-source">Sumber: Al-Wajiz fi Usul al-Fiqh (Abdul Karim Zaidan).</div>
                 </div>
 
                 <div class="term-item">
                     <div class="term-arabic">مبين</div>
                     <div class="term-title">Mubayyan</div>
-                    <div class="term-desc">Lafal atau hukum yang penjelasannya sudah terang dan gamblang sehingga tidak menyisakan keraguan bagi pembaca.</div>
+                    <div class="term-desc">Lafal atau hukum yang penjelasannya sudah terang dan gamblang sehingga tidak menyisakan keraguan.</div>
                     <div class="term-source">Sumber: Al-Ihkam fi Usul al-Ahkam (Al-Amidi).</div>
                 </div>
 
                 <div class="term-item">
                     <div class="term-arabic">مؤول</div>
                     <div class="term-title">Mu'awwal</div>
-                    <div class="term-desc">Lafal yang dipalingkan dari makna lahiriahnya ke makna lain yang lebih kuat karena adanya dalil pendukung yang rasional.</div>
+                    <div class="term-desc">Lafal yang dipalingkan dari makna lahiriahnya ke makna lain yang lebih kuat karena dalil rasional.</div>
                     <div class="term-source">Sumber: Al-Mustasfa (Imam al-Ghazali).</div>
                 </div>
 
@@ -563,117 +595,117 @@
                     <div class="term-title">Musytarak</div>
                     <div class="term-desc">Lafal tunggal yang memiliki lebih dari satu arti atau makna berbeda secara bahasa (homonim).</div>
                     <div class="term-source">Sumber: Al-Itqan fi Ulum al-Qur'an (Imam al-Suyuthi).</div>
-                    </div>
+                </div>
 
                 <div class="term-item">
                     <div class="term-arabic">مرادف</div>
                     <div class="term-title">Muradif</div>
-                    <div class="term-desc">Beberapa lafal berbeda yang memiliki satu arti atau sinonim yang sama dalam pemahaman kebahasaan Al-Qur'an.</div>
+                    <div class="term-desc">Beberapa lafal berbeda yang memiliki satu arti atau sinonim yang sama dalam kebahasaan Al-Qur'an.</div>
                     <div class="term-source">Sumber: Al-Muzhir fi Ulum al-Lughah (Imam al-Suyuthi).</div>
                 </div>
 
                 <div class="term-item">
                     <div class="term-arabic">التفسير بالمأثور</div>
                     <div class="term-title">Tafsir Bil-Ma'tsur</div>
-                    <div class="term-desc">Metode penafsiran Al-Qur'an dengan Al-Qur'an, hadis Nabi Muhammad SAW, atsar sahabat, dan tabiin.</div>
-                    <div class="term-source">Sumber: Al-Tafsir wa al-Mufasirun (Prof. Dr. Muhammad Husain al-Dzahabi).</div>
+                    <div class="term-desc">Metode penafsiran Al-Qur'an dengan Al-Qur'an, hadis Nabi, atsar sahabat, dan tabiin.</div>
+                    <div class="term-source">Sumber: Al-Tafsir wa al-Mufasirun (Muhammad Husain al-Dzahabi).</div>
                 </div>
 
                 <div class="term-item">
                     <div class="term-arabic">التفسير بالرأي</div>
                     <div class="term-title">Tafsir Bir-Ra'yi</div>
-                    <div class="term-desc">Metode penafsiran Al-Qur'an yang bersandarkan pada ijtihad akal pikiran, kaidah bahasa, dan rasio mufasir yang memenuhi syarat.</div>
+                    <div class="term-desc">Metode penafsiran Al-Qur'an yang bersandarkan pada ijtihad akal pikiran dan kaidah bahasa mufasir.</div>
                     <div class="term-source">Sumber: Al-Tafsir wa al-Mufasirun (Muhammad Husain al-Dzahabi).</div>
                 </div>
 
                 <div class="term-item">
                     <div class="term-arabic">التفسير بالإشاري</div>
                     <div class="term-title">Tafsir Bil-Isyari</div>
-                    <div class="term-desc">Penafsiran ayat berdasarkan isyarat makrifat tasawuf atau batin yang tersingkap bagi para sufi di balik teks zahir.</div>
+                    <div class="term-desc">Penafsiran ayat berdasarkan isyarat makrifat tasawuf atau batin yang tersingkap bagi para sufi.</div>
                     <div class="term-source">Sumber: Al-Tafsir wa al-Mufasirun (Muhammad Husain al-Dzahabi).</div>
                 </div>
 
                 <div class="term-item">
                     <div class="term-arabic">التفسير التحليلي</div>
                     <div class="term-title">Tahlili</div>
-                    <div class="term-desc">Metode penafsiran runtut ayat demi ayat dari surah Al-Fatihah sampai An-Nas beserta segala aspek kandungan maknanya.</div>
-                    <div class="term-source">Sumber: Al-Farmawi, Al-Bidayah fi al-Tafsir al-Maudhu'i.</div>
+                    <div class="term-desc">Metode penafsiran runtut ayat demi ayat dari surah Al-Fatihah sampai An-Nas secara mendalam.</div>
+                    <div class="term-source">Sumber: Al-Bidayah fi al-Tafsir al-Maudhu'i (Al-Farmawi).</div>
                 </div>
 
                 <div class="term-item">
                     <div class="term-arabic">التفسير الموضوعي</div>
                     <div class="term-title">Maudhu'i</div>
-                    <div class="term-desc">Metode penafsiran tematik yang menghimpun ayat-ayat dari berbagai surah yang membahas satu topik khusus secara utuh.</div>
-                    <div class="term-source">Sumber: Al-Tafsir al-Maudhu'i: Dirasah Manhajiyyah (Dr. Mustafa Muslim).</div>
+                    <div class="term-desc">Metode penafsiran tematik yang menghimpun ayat-ayat dari berbagai surah yang membahas satu topik khusus.</div>
+                    <div class="term-source">Sumber: Al-Tafsir al-Maudhu'i (Dr. Mustafa Muslim).</div>
                 </div>
 
                 <div class="term-item">
                     <div class="term-arabic">التفسير المقارن</div>
                     <div class="term-title">Muqaran</div>
-                    <div class="term-desc">Metode penafsiran komparatif dengan cara membandingkan ayat Al-Qur'an dengan ayat lain, atau pandangan para mufasir.</div>
+                    <div class="term-desc">Metode penafsiran komparatif dengan membandingkan ayat Al-Qur'an dengan ayat lain atau pandangan mufasir.</div>
                     <div class="term-source">Sumber: Al-Madhal ila al-Tafsir al-Muqaran (Dr. Al-Farmawi).</div>
                 </div>
 
                 <div class="term-item">
                     <div class="term-arabic">التفسير الإجمالي</div>
                     <div class="term-title">Ijmali</div>
-                    <div class="term-desc">Metode penjelasan isi Al-Qur'an secara global dan ringkas dengan bahasa lugas yang mudah dipahami pembaca umum.</div>
-                    <div class="term-source">Sumber: Manhaj al-Madrasah al-Aqliyah al-Haditsah (Fahd al-Rumi).</div>
+                    <div class="term-desc">Metode penjelasan isi Al-Qur'an secara global dan ringkas dengan bahasa lugas bagi pembaca umum.</div>
+                    <div class="term-source">Sumber: Manhaj al-Madrasah al-Aqliyah (Fahd al-Rumi).</div>
                 </div>
 
                 <div class="term-item">
                     <div class="term-arabic">تأويل</div>
-  <div class="term-title">Takwil</div>
-                    <div class="term-desc">Upaya mengalihkan makna ayat kepada arti lain yang lebih rasional atau menyingkap hakikat maksud tersembunyi dari suatu teks.</div>
-                    <div class="term-source">Sumber: Ma'anil Qur'an (Al-Farra') & Majaz al-Qur'an (Abu Ubaidah).</div>
+                    <div class="term-title">Takwil</div>
+                    <div class="term-desc">Upaya mengalihkan makna ayat kepada arti lain yang lebih rasional atau menyingkap maksud tersembunyi.</div>
+                    <div class="term-source">Sumber: Ma'anil Qur'an (Al-Farra').</div>
                 </div>
 
                 <div class="term-item">
                     <div class="term-arabic">ترجمة حرفية</div>
                     <div class="term-title">Terjemah Harfiyah</div>
-                    <div class="term-desc">Penerjemahan kata per kata Al-Qur'an ke dalam bahasa lain dengan mempertahankan susunan struktur asli bahasa Arabnya.</div>
-                    <div class="term-source">Sumber: Mabahis fi Tarjamah al-Qur'an (Syeikh Muhammad Ali al-Shabuni).</div>
+                    <div class="term-desc">Penerjemahan kata per kata Al-Qur'an dengan mempertahankan susunan struktur asli bahasa Arabnya.</div>
+                   <div class="term-source">Sumber: Mabahis fi Tarjamah al-Qur'an (Muhammad Ali al-Shabuni).</div>
                 </div>
 
                 <div class="term-item">
                     <div class="term-arabic">ترجمة تفسيرية</div>
                     <div class="term-title">Terjemah Tafsiriyah</div>
-                    <div class="term-desc">Penerjemahan makna kandungan Al-Qur'an secara substansial dengan memperhatikan konteks penjelasan tanpa terpaku kaku pada susunan harfiah.</div>
+                    <div class="term-desc">Penerjemahan makna kandungan Al-Qur'an secara substansial tanpa terpaku kaku pada susunan harfiah.</div>
                     <div class="term-source">Sumber: Al-Itqan fi Ulum al-Qur'an (Imam al-Suyuthi).</div>
                 </div>
 
                 <div class="term-item">
                     <div class="term-arabic">هيرمينوتيقا</div>
                     <div class="term-title">Hermeneutika</div>
-                    <div class="term-desc">Teori dan metodologi interpretasi teks modern yang diadopsi sebagian pemikir kontemporer dalam mengkaji teks kitab suci.</div>
-                    <div class="term-source">Sumber: Mafhum al-Nash: Dirasah fi Ulum al-Qur'an (Nasr Hamid Abu Zayd).</div>
+                    <div class="term-desc">Teori dan metodologi interpretasi teks modern yang diadopsi sebagian pemikir kontemporer.</div>
+                    <div class="term-source">Sumber: Mafhum al-Nash (Nasr Hamid Abu Zayd).</div>
                 </div>
 
                 <div class="term-item">
                     <div class="term-arabic">إسرائيليات</div>
                     <div class="term-title">Israiliyyat</div>
-                    <div class="term-desc">Kisah-kisah riwayat masa lalu umat terdahulu yang bersumber dari tradisi Yahudi dan Nasrani yang masuk dalam literatur tafsir.</div>
-                    <div class="term-source">Sumber: Al-Israiliyyat wa al-Maudhu'at fi Kutub al-Tafsir (Dr. Muhammad Abu Shahbah).</div>
+                    <div class="term-desc">Kisah riwayat masa lalu umat terdahulu dari tradisi Yahudi dan Nasrani yang masuk dalam tafsir.</div>
+                    <div class="term-source">Sumber: Al-Israiliyyat wa al-Maudhu'at (Muhammad Abu Shahbah).</div>
                 </div>
 
                 <div class="term-item">
                     <div class="term-arabic">مفسر</div>
                     <div class="term-title">Mufasir</div>
-                    <div class="term-desc">Seorang ilmuwan atau pakar keagamaan yang mendedikasikan diri untuk menjelaskan dan menafsirkan kandungan ayat Al-Qur'an.</div>
-                    <div class="term-source">Sumber: Thabaqat al-Mufassirin (Imam al-Suyuthi & Al-Dawudi).</div>
+                    <div class="term-desc">Seorang ilmuwan atau pakar keagamaan yang mendedikasikan diri menafsirkan ayat Al-Qur'an.</div>
+                    <div class="term-source">Sumber: Thabaqat al-Mufassirin (Imam al-Suyuthi).</div>
                 </div>
 
                 <div class="term-item">
                     <div class="term-arabic">سند</div>
                     <div class="term-title">Sanad</div>
-                    <div class="term-desc">Rangkaian para perawi atau orang-orang yang menyampaikan jalur periwayatan teks atau hadis hingga sampai kepada sumber utamanya.</div>
-                    <div class="term-source">Sumber: Ulum al-Hadis wa Mustolahuhu (Dr. Subhi al-Salih).</div>
+                    <div class="term-desc">Rangkaian para perawi atau orang yang menyampaikan jalur periwayatan teks hingga ke sumber utama.</div>
+                    <div class="term-source">Sumber: Ulum al-Hadis (Dr. Subhi al-Salih).</div>
                 </div>
 
                 <div class="term-item">
                     <div class="term-arabic">متن</div>
                     <div class="term-title">Matan</div>
-                    <div class="term-desc">Materi pokok atau isi redaksi teks (baik ayat maupun sabda Nabi) yang terletak di ujung rangkaian sanad periwayatan.</div>
+                    <div class="term-desc">Materi pokok atau isi redaksi teks (ayat/hadis) yang terletak di ujung rangkaian sanad periwayatan.</div>
                     <div class="term-source">Sumber: Taysir Mustalah al-Hadis (Mahmud al-Thahhan).</div>
                 </div>
             </div>
@@ -684,38 +716,26 @@
     <div id="page-tafsir" class="page-section">
         <div class="main-container">
             <div class="content-header">
-                <h2 style="color: #ffffff; font-size: 1.1rem;">🔍 Pengantar Kajian Tafsir</h2>
-                <a class="back-btn" onclick="switchPage('home')">← Kembali ke Beranda</a>
+                <h2 style="color: #ffffff; font-size: 1.05rem;">🔍 Pengantar Kajian Tafsir</h2>
+                <a class="back-btn" onclick="switchPage('home')">← Beranda</a>
             </div>
             <div class="term-item">
                 <div class="term-title">Tafsir Tahlili</div>
-                <div class="term-desc">Metode penafsiran yang memaparkan ayat demi ayat sesuai urutan mushaf secara mendalam dan menyeluruh[span_0](start_span)[span_0](end_span).</div>
-            </div>
-            <div class="term-item">
-                <div class="term-title">Tafsir Maudhu'i (Tematik)</div>
-                <div class="term-desc">Metode penafsiran yang menghimpun ayat-ayat dari berbagai surah yang membahas satu tema tertentu secara utuh[span_1](start_span)[span_1](end_span).</div>
-            </div>
-            <div class="term-item">
-                <div class="term-title">Tafsir Ijmali</div>
-                <div class="term-desc">Metode penjelasan isi Al-Qur'an secara global dan ringkas dengan bahasa lugas yang mudah dipahami pembaca umum.</div>
+                <div class="term-desc">Metode penafsiran yang memaparkan ayat demi ayat sesuai urutan mushaf secara mendalam.</div>
             </div>
         </div>
     </div>
 
- <!-- HALAMAN TAJWID -->
+    <!-- HALAMAN TAJWID -->
     <div id="page-tajwid" class="page-section">
         <div class="main-container">
             <div class="content-header">
-                <h2 style="color: #ffffff; font-size: 1.1rem;">✨ Dasar Ilmu Tajwid</h2>
-                <a class="back-btn" onclick="switchPage('home')">← Kembali ke Beranda</a>
+                <h2 style="color: #ffffff; font-size: 1.05rem;">✨ Dasar Ilmu Tajwid</h2>
+                <a class="back-btn" onclick="switchPage('home')">← Beranda</a>
             </div>
             <div class="term-item">
                 <div class="term-title">Hukum Nun Mati & Tanwin</div>
-                <div class="term-desc">Terbagi menjadi 4 hukum utama saat bertemu huruf hijaiyah: Izhar, Idgham, Iqlab, dan Ikhfa[span_2](start_span)[span_2](end_span).</div>
-            </div>
-            <div class="term-item">
-                <div class="term-title">Mad Thabi'i</div>
-                <div class="term-desc">Panjang bacaan alami sepanjang dua harakat karena tidak ada hamzah atau sukun yang menyertainya[span_3](start_span)[span_3](end_span).</div>
+                <div class="term-desc">Hukum bacaan saat nun sukun atau tanwin bertemu huruf hijaiyah.</div>
             </div>
         </div>
     </div>
@@ -724,16 +744,12 @@
     <div id="page-klasik" class="page-section">
         <div class="main-container">
             <div class="content-header">
-                <h2 style="color: #ffffff; font-size: 1.1rem;">📚 Istilah Pesantren & Klasik</h2>
-                <a class="back-btn" onclick="switchPage('home')">← Kembali ke Beranda</a>
+                <h2 style="color: #ffffff; font-size: 1.05rem;">📚 Istilah Pesantren & Klasik</h2>
+                <a class="back-btn" onclick="switchPage('home')">← Beranda</a>
             </div>
             <div class="term-item">
                 <div class="term-title">Matan</div>
-                <div class="term-desc">Teks atau redaksi inti dari sebuah kitab kuning klasik yang menjadi objek kajian utama[span_4](start_span)[span_4](end_span).</div>
-            </div>
-            <div class="term-item">
-                <div class="term-title">Syarah & Hasyiyah</div>
-                <div class="term-desc">Syarah adalah kitab penjelas matan, sedangkan Hasyiyah adalah catatan pinggir pengulas syarah tersebut[span_5](start_span)[span_5](end_span).</div>
+                <div class="term-desc">Teks inti kitab klasik yang menjadi objek kajian utama.</div>
             </div>
         </div>
     </div>
@@ -743,7 +759,7 @@
         🌿 &copy; 2026 RDA Quran Studio. Ruang Baca & Studi Digital.
     </footer>
 
-    <!-- SCRIPT JAVASCRIPT (GANTI TAB & PENCARIAN 51 ISTILAH) -->
+    <!-- JAVASCRIPT -->
     <script>
         function switchPage(pageName) {
             const pages = document.querySelectorAll('.page-section');
@@ -761,7 +777,7 @@
             let items = document.querySelectorAll('#termList .term-item');
 
             items.forEach(item => {
-                let arabic = item.querySelector('.term-arabic').textContent.toLowerCase();
+                let arabic = item.querySelector('.term-arabic') ? item.querySelector('.term-arabic').textContent.toLowerCase() : '';
                 let title = item.querySelector('.term-title').textContent.toLowerCase();
                 let desc = item.querySelector('.term-desc').textContent.toLowerCase();
 
@@ -773,431 +789,5 @@
             });
         }
     </script>
-</body>
-</html>
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        .pill-btn:hover {
-            border-color: var(--primary-accent);
-            color: var(--primary-accent);
-        }
-
-        /* SECTION KONTEN UMUM */
-        .container {
-            padding: 30px 15px;
-            max-width: 600px;
-            margin: auto;
-        }
-        .section-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--primary-accent);
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-left: 4px solid var(--primary-accent);
-            padding-left: 10px;
-        }
-
-        /* KOTAK ABOUT US */
-        .about-card {
-            background: var(--card-bg);
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--border-glass);
-            border-radius: 16px;
-            padding: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-        }
-        .about-card p {
-            font-size: 0.9rem;
-            line-height: 1.6;
-            color: var(--text-muted);
-            margin: 0;
-        }
-
-        /* KOTAK PENCARIAN */
-        .search-box {
-            margin-bottom: 20px;
-        }
-        .search-box input {
-            width: 100%;
-            padding: 12px 16px;
-            font-size: 0.95rem;
-            background: var(--card-bg);
-            border: 1px solid var(--border-glass);
-            color: white;
-            border-radius: 10px;
-            box-sizing: border-box;
-            outline: none;
-            backdrop-filter: blur(10px);
-        }
-        .search-box input::placeholder {
-            color: var(--text-muted);
-        }
-        .search-box input:focus {
-            border-color: var(--primary-accent);
-        }
-
-        /* KARTU MATERI */
-        .card {
-            background: var(--card-bg);
-            backdrop-filter: blur(12px);
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 12px;
-            border: 1px solid var(--border-glass);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-        }
-        .card h3 {
-            margin-top: 0;
-            color: var(--primary-accent);
-            font-size: 1.15rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .card h3 .arabic-title {
-            font-family: 'Traditional Arabic', 'Amiri', serif;
-            font-size: 1.3rem;
-            color: #5eead4;
-        }
-        .card .badge-def {
-            background-color: rgba(45, 212, 191, 0.1);
-            color: #5eead4;
-            padding: 8px 12px;
-            border-radius: 8px;
-            font-size: 0.88rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-            border: 1px solid rgba(45, 212, 191, 0.2);
-        }
-        .card p {
-            font-size: 0.9rem;
-            line-height: 1.5;
-            color: #d1d5db;
-            margin: 8px 0;
-        }
-        .source-note {
-            margin-top: 12px;
-            padding-top: 8px;
-            border-top: 1px dashed rgba(255,255,255,0.1);
-            font-size: 0.78rem;
-            color: var(--text-muted);
-            font-style: italic;
-        }
-                /* TAB SECTION */
-        .content-section {
-            display: none;
-            padding-bottom: 80px;
-        }
-        .content-section.active {
-            display: block;
-        }
-
-        /* NAVIGASI BAWAH */
-        nav.bottom-nav {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(11, 19, 31, 0.95);
-            backdrop-filter: blur(10px);
-            display: flex;
-            justify-content: space-around;
-            border-top: 1px solid var(--border-glass);
-            z-index: 1000;
-        }
-        nav.bottom-nav button {
-            background: none;
-            border: none;
-            padding: 14px 0;
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--text-muted);
-            width: 33.33%;
-            cursor: pointer;
-        }
-        nav.bottom-nav button.active {
-            color: var(--primary-accent);
-            border-bottom: 3px solid var(--primary-accent);
-        }
-    </style>
-</head>
-<body>
-
-    <!-- NAVBAR ATAS -->
-    <div class="top-navbar">
-        <div class="nav-links">
-            <a href="#home" class="active" onclick="switchTab('home')">Home</a>
-            <a href="#about" onclick="switchTab('about')">About</a>
-            <a href="#help" onclick="alert('Bantuan: Gunakan kolom pencarian di menu Ensiklopedia untuk mencari istilah Ulumul Qur’an dengan cepat.')">Help</a>
-        </div>
-        <a href="#ulumul" class="nav-btn-explore" onclick="switchTab('ulumul')">Mulai 🚀</a>
-    </div>
-
-    <!-- HALAMAN UTAMA / COVER (HOME & HERO) -->
-    <div id="section-home" class="content-section active">
-        <div class="hero-section">
-            <h1 class="hero-title">RDA QURAN STUDIO</h1>
-            <p class="hero-subtitle">Pusat Studi Al-Qur'an, Ensiklopedia Istilah, Tafsir Komprehensif, & Ilmu Tajwid.</p>
-            <div class="hero-menu-pills">
-                <button class="pill-btn" onclick="switchTab('ulumul')">📚 Ensiklopedia</button>
-                <button class="pill-btn" onclick="switchTab('tafsir')">📖 Kajian Tafsir</button>
-                <button class="pill-btn" onclick="switchTab('tajwid')">✨ Ilmu Tajwid</button>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="section-title">Tentang Kami (About Us)</div>
-            <div class="about-card">
-                <p><strong>RDA Quran Studio</strong> adalah platform digital berbasis riset akademik yang dirancang khusus untuk memudahkan mahasiswa Program Studi Ilmu Al-Qur'an dan Tafsir (IAT) serta masyarakat umum dalam mendalami khazanah keilmuan Islam, mulai dari ensiklopedia istilah klasik hingga analisis tafsir tematik.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- SEKSI 1: ENSIKLOPEDIA ULUMUL QUR'AN (21 ISTILAH LENGKAP) -->
-    <div id="section-ulumul" class="container content-section">
-        <div class="section-title">Ensiklopedia Ulumul Qur'an</div>
-        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px;">Istilah-istilah dasar muktabar pengantar studi Al-Qur'an.</p>
-
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="🔍 Cari istilah (cth: Wahyu, Rasm, Tafsir)..." onkeyup="searchTerms()">
-        </div>
-
-        <div id="card-container">
-            <div class="card" data-title="al wahyu wahyu الوحي">
-                <h3><span>1. Al-Wahyu</span> <span class="arabic-title">الوَحْي</span></h3>
-                <div class="badge-def">📌 <strong>Definisi:</strong> Pemberitahuan Allah SWT secara tersembunyi dan cepat kepada hamba yang dipilih-Nya.</div>
-                <p><strong>Penjelasan:</strong> Wahyu merupakan fondasi utama penurunan Al-Qur'an melalui perantara Malaikat Jibril AS.</p>
-                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Mabāhits fī ‘Ulūm al-Qur’ān, Manna' al-Qhattan.</div>
-            </div>
-
-            <div class="card" data-title="asbabun nuzul asbabul nuzul أسباب النزول">
-                <h3><span>2. Asbabun Nuzul</span> <span class="arabic-title">أَسْبَابُ النُّزُوْل</span></h3>
-                <div class="badge-def">📌 <strong>Definisi:</strong> Latar belakang atau peristiwa historis penyebab turunnya ayat Al-Qur'an.</div>
-                <p><strong>Penjelasan:</strong> Penting untuk memahami konteks historis penafsiran hukum agar tidak terjadi salah paham.</p>
-                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Al-Itqān fī ‘Ulūm al-Qur’ān, Jalaluddin As-Suyuthi.</div>
-            </div>
-
-            <div class="card" data-title="makkiyah المكية">
-                <h3><span>3. Makkiyah</span> <span class="arabic-title">المَكِّيَّة</span></h3>
-                <div class="badge-def">📌 <strong>Definisi:</strong> Ayat yang diturunkan sebelum Nabi Muhammad SAW berhijrah ke Madinah.</div>
-                <p><strong>Penjelasan:</strong> Berfokus pada penanaman akidah, tauhid, keimanan, serta ajakan moral universal.</p>
-                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Mabāhits fī ‘Ulūm al-Qur’ān, Manna' al-Qhattan.</div>
-            </div>
-
-            <div class="card" data-title="madaniyah المدنية">
-                <h3><span>4. Madaniyah</span> <span class="arabic-title">المَدَنِيَّة</span></h3>
-                <div class="badge-def">📌 <strong>Definisi:</strong> Ayat yang diturunkan setelah peristiwa hijrah ke Madinah.</div>
-                <p><strong>Penjelasan:</strong> Banyak memuat ketentuan hukum syariat, muamalah, dan tata kelola masyarakat.</p>
-                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Mabāhits fī ‘Ulūm al-Qur’ān, Manna' al-Qhattan.</div>
-            </div>
-
-            <div class="card" data-title="jam'ul qur'an pengumpulan al-qur'an جمع القرآن">
-                <h3><span>5. Jam'ul Qur'an</span> <span class="arabic-title">جَمْعُ القُرْآن</span></h3>
-                <div class="badge-def">📌 <strong>Definisi:</strong> Proses pengumpulan, penghafalan, dan pembukuan mushaf Al-Qur'an.</div>
-                <p><strong>Penjelasan:</strong> Meliputi fase masa Nabi, Abu Bakar, hingga standardisasi mushaf Utsman bin Affan.</p>
-                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Al-Burhān fī ‘Ulūm al-Qur’ān, Al-Zarkasyi.</div>
-            </div>
-
-            <div class="card" data-title="rasm usmani uthmani الرسم العثماني">
-                <h3><span>6. Rasm Usmani</span> <span class="arabic-title">الرَّسْمُ العُثْمَانِي</span></h3>
-                <div class="badge-def">📌 <strong>Definisi:</strong> Tata cara penulisan kata-kata Al-Qur'an standar masa Khalifah Utsman.</div>
-                <p><strong>Penjelasan:</strong> Menjadi acuan resmi penulisan mushaf di seluruh dunia hingga saat ini.</p>
-                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Mabāhits fī ‘Ulūm al-Qur’ān, Manna' al-Qhattan.</div>
-            </div>
-
-            <div class="card" data-title="al ahruf as sab'ah sabah الأحرف السبعة">
-                <h3><span>7. Al-Ahruf As-Sab'ah</span> <span class="arabic-title">الأَحْرُفُ السَّبْعَة</span></h3>
-                <div class="badge-def">📌 <strong>Definisi:</strong> Tujuh variasi dialek bahasa Arab dalam penurunan Al-Qur'an.</div>
-                <p><strong>Penjelasan:</strong> Kemudahan dari Allah bagi berbagai suku Arab untuk membaca Al-Qur'an.</p>
-                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Al-Itqān fī ‘Ulūm al-Qur’ān, Jalaluddin As-Suyuthi.</div>
-            </div>
-
-            <div class="card" data-title="al qira'at qiraat qiroat القراءات">
-                <h3><span>8. Al-Qira'at</span> <span class="arabic-title">القِرَاءَات</span></h3>
-                <div class="badge-def">📌 <strong>Definisi:</strong> Mazhab cara membaca teks Al-Qur'an oleh para imam qurra' bersanad mutawatir.</div>
-                <p><strong>Penjelasan:</strong> Contohnya Qira'at Sab'ah seperti riwayat Hafs dari Imam Asim.</p>
-                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Al-Burhān fī ‘Ulūm al-Qur’ān, Al-Zarkasyi.</div>
-            </div>
-
-            <div class="card" data-title="mutawatir المتواتر">
-                <h3><span>9. Mutawatir</span> <span class="arabic-title">المُتَوَاتِر</span></h3>
-                <div class="badge-def">📌 <strong>Definisi:</strong> Periwayatan oleh banyak perawi di setiap tingkat yang mustahil sepakat bohong.</div>
-                <p><strong>Penjelasan:</strong> Menjamin keautentikan mutlak teks Al-Qur'an sejak masa Nabi.</p>
-                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Mabāhits fī ‘Ulūm al-Qur’ān, Manna' al-Qhattan.</div>
-            </div>
-
-            <div class="card" data-title="syadzdzah syadzah الشاذة">
-                <h3><span>10. Syadzdzah</span> <span class="arabic-title">الشَّاذَّة</span></h3>
-                <div class="badge-def">📌 <strong>Definisi:</strong> Bacaan qira'at yang tidak memenuhi syarat kesahihan mutawatir.</div>
-                <p><strong>Penjelasan:</strong> Tidak digunakan untuk shalat, namun dipakai sebagian ulama untuk penjelasan tafsir.</p>
-                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Al-Itqān fī ‘Ulūm al-Qur’ān, Jalaluddin As-Suyuthi.</div>
-            </div>
-
-            <div class="card" data-title="muhkam المحكم">
-                <h3><span>11. Muhkam</span> <span class="arabic-title">المُحْكَم</span></h3>
-                <div class="badge-def">📌 <strong>Definisi:</strong> Ayat yang sudah sangat jelas maknanya dan mudah dipahami.</div>
-                <p><strong>Penjelasan:</strong> Menjadi prinsip utama atau induk hukum dalam syariat Islam.</p>
-                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Mabāhits fī ‘Ulūm al-Qur’ān, Manna' al-Qhattan.</div>
-            </div>
-
-            <div class="card" data-title="mutasyabih المتشابه">
-                <h3><span>12. Mutasyabih</span> <span class="arabic-title">المُتَشَابِه</span></h3>
-                <div class="badge-def">📌 <strong>Definisi:</strong> Ayat yang maknanya samar atau membutuhkan kajian mendalam.</div>
-                <p><strong>Penjelasan:</strong> Seperti huruf-huruf potongan di awal surah (*fawatihussuwar*).</p>
-                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Al-Burhān fī ‘Ulūm al-Qur’ān, Al-Zarkasyi.</div>
-            </div>
-
-            <div class="card" data-title="nasikh الناسخ">
-                <h3><span>13. Nasikh</span> <span class="arabic-title">النَّاسِخ</span></h3>
-                <div class="badge-def">📌 <strong>Definisi:</strong> Dalil syariat yang menghapus atau mengganti hukum sebelumnya.</div>
-                <p><strong>Penjelasan:</strong> Bagian dari tahapan hukum Islam sesuai kemaslahatan umat.</p>
-                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Mabāhits fī ‘Ulūm al-Qur’ān, Manna' al-Qhattan.</div>
-            </div>
-
-            <div class="card" data-title="mansukh المنسوخ">
-                <h3><span>14. Mansukh</span> <span class="arabic-title">المَنْسُوْخ</span></h3>
-                <div class="badge-def">📌 <strong>Definisi:</strong> Hukum lama yang telah dihapus oleh ketentuan dalil nasikh.</div>
-                <p><strong>Penjelasan:</strong> Penting dipahami agar mufassir tidak menerapkan hukum yang sudah diganti.</p>
-                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Al-Itqān fī ‘Ulūm al-Qur’ān, Jalaluddin As-Suyuthi.</div>
-            </div>
-
-            <div class="card" data-title="am umum العام">
-                <h3><span>15. 'Am</span> <span class="arabic-title">العَام</span></h3>
-                <div class="badge-def">📌 <strong>Definisi:</strong> Lafaz yang mencakup seluruh satuan tanpa pembatasan jumlah.</div>
-                <p><strong>Penjelasan:</strong> Berlaku umum kecuali dikhususkan oleh dalil lain (*khas*).</p>
-                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Mabāhits fī ‘Ulūm al-Qur’ān, Manna' al-Qhattan.</div>
-            </div>
-
-            <div class="card" data-title="khas khusus الخاص">
-                <h3><span>16. Khas</span> <span class="arabic-title">الخَاص</span></h3>
-                <div class="badge-def">📌 <strong>Definisi:</strong> Lafaz yang menunjukkan arti khusus pada individu atau kelompok tertentu.</div>
-                <p><strong>Penjelasan:</strong> Berfungsi membatasi keumuman lafaz *'am*.</p>
-                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Al-Burhān fī ‘Ulūm al-Qur’ān, Al-Zarkasyi.</div>
-            </div>
-
-            <div class="card" data-title="muthlaq mutlaq المطلق">
-                <h3><span>17. Muthlaq</span> <span class="arabic-title">المُطْلَق</span></h3>
-                <div class="badge-def">📌 <strong>Definisi:</strong> Lafaz yang menunjukkan hakikat sesuatu tanpa syarat ikatan.</div>
-                <p><strong>Penjelasan:</strong> Dipahami mutlak selama tidak ada pembatas (*muqayyad*).</p>
-                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Mabāhits fī ‘Ulūm al-Qur’ān, Manna' al-Qhattan.</div>
-            </div>
-            <div class="card" data-title="muqayyad المقيد">
-                <h3><span>18. Muqayyad</span> <span class="arabic-title">المُقَيَّد</span></h3>
-                <div class="badge-def">📌 <strong>Definisi:</strong> Lafaz yang dibatasi oleh sifat atau syarat tertentu.</div>
-                <p><strong>Penjelasan:</strong> Memberikan batasan spesifik terhadap lafaz muthlaq.</p>
-                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Al-Itqān fī ‘Ulūm al-Qur’ān, Jalaluddin As-Suyuthi.</div>
-            </div>
-
-            <div class="card" data-title="tafsir التفسير">
-                <h3><span>19. Tafsir</span> <span class="arabic-title">التَّفْسِيْر</span></h3>
-                <div class="badge-def">📌 <strong>Definisi:</strong> Ilmu untuk memahami kitab Allah dan menjelaskan makna hukumnya.</div>
-                <p><strong>Penjelasan:</strong> Berfokus pada penjelasan makna zahir dan konteks kebahasaan.</p>
-                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Al-Burhān fī ‘Ulūm al-Qur’ān, Al-Zarkasyi.</div>
-            </div>
-
-            <div class="card" data-title="ta'wil tawil التأويل">
-                <h3><span>20. Ta'wil</span> <span class="arabic-title">التَّأْوِيْل</span></h3>
-                <div class="badge-def">📌 <strong>Definisi:</strong> Memalingkan makna zahir ke makna batin berdasarkan dalil.</div>
-                <p><strong>Penjelasan:</strong> Memerlukan kedalaman ilmu agar tetap dalam koridor syariat.</p>
-                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Mabāhits fī ‘Ulūm al-Qur’ān, Manna' al-Qhattan.</div>
-            </div>
-
-            <div class="card" data-title="i'jazul qur'an ijaz keajaiban إعجاز القرآن">
-                <h3><span>21. I'jazul Qur'an</span> <span class="arabic-title">إِعْجَازُ القُرْآن</span></h3>
-                <div class="badge-def">📌 <strong>Definisi:</strong> Kemukjizatan Al-Qur'an yang melemahkan penantangnya.</div>
-                <p><strong>Penjelasan:</strong> Terpancar dari keindahan bahasa, hukum, dan isyarat ilmiah.</p>
-                <div class="source-note">📚 <strong>Sumber/Referensi:</strong> Al-Itqān fī ‘Ulūm al-Qur’ān, Jalaluddin As-Suyuthi.</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- SEKSI 2: KAJIAN TAFSIR -->
-    <div id="section-tafsir" class="container content-section">
-        <div class="section-title">Kajian Tafsir Al-Qur'an</div>
-        <div class="card">
-            <h3>Komparasi & Pemetaan Tafsir</h3>
-            <div class="badge-def">📌 <strong>Fokus Studi:</strong> Tafsir Tematik & Maqāṣidī</div>
-            <p>Halaman ini dikembangkan untuk menampilkan pendekatan kontemporer dalam memahami pesan universal Al-Qur'an sesuai konteks kekinian.</p>
-            <div class="source-note">📚 <strong>Referensi:</strong> Tafsir Al-Mishbah & Literatur Maqāṣidī.</div>
-        </div>
-    </div>
-
-    <!-- SEKSI 3: ILMU TAJWID -->
-    <div id="section-tajwid" class="container content-section">
-        <div class="section-title">Ilmu Tajwid & Makharijul Huruf</div>
-        <div class="card">
-            <h3>Kaidah Pembacaan Al-Qur'an</h3>
-            <div class="badge-def">📌 <strong>Fokus Materi:</strong> Makharij, Sifat Huruf, & Ahkamu Nun Sakinah</div>
-            <p>Modul tambahan untuk mempelajari tata cara melafalkan ayat suci Al-Qur'an secara tartil sesuai standar qira'at yang sahih.</p>
-            <div class="source-note">📚 <strong>Referensi:</strong> Hidayatul Mustafid & Kitab Tajwid Standar.</div>
-        </div>
-    </div>
-
-    <!-- NAVIGASI BAWAH (TAB UTAMA) -->
-    <nav class="bottom-nav">
-        <button id="btn-home" class="active" onclick="switchTab('home')">🏠 Beranda</button>
-        <button id="btn-ulumul" onclick="switchTab('ulumul')">📚 Ensiklopedia</button>
-        <button id="btn-tafsir" onclick="switchTab('tafsir')">📖 Tafsir & Tajwid</button>
-    </nav>
-
-    <!-- SCRIPT JAVASCRIPT -->
-       <script>
-        function switchTab(tabName) {
-            // Sembunyikan semua seksi
-            document.getElementById('section-home').classList.remove('active');
-            document.getElementById('section-ulumul').classList.remove('active');
-            document.getElementById('section-tafsir').classList.remove('active');
-            document.getElementById('section-tajwid').classList.remove('active');
-
-            // Nonaktifkan semua tombol navigasi bawah
-            document.getElementById('btn-home').classList.remove('active');
-            document.getElementById('btn-ulumul').classList.remove('active');
-            document.getElementById('btn-tafsir').classList.remove('active');
-
-            // Aktifkan berdasarkan pilihan
-            if(tabName === 'home') {
-                document.getElementById('section-home').classList.add('active');
-                document.getElementById('btn-home').classList.add('active');
-                window.scrollTo(0, 0);
-            } else if(tabName === 'ulumul') {
-                document.getElementById('section-ulumul').classList.add('active');
-                document.getElementById('btn-ulumul').classList.add('active');
-                window.scrollTo(0, 0);
-            } else if(tabName === 'tafsir') {
-                document.getElementById('section-tafsir').classList.add('active');
-                document.getElementById('section-tajwid').classList.add('active');
-                document.getElementById('btn-tafsir').classList.add('active');
-                window.scrollTo(0, 0);
-            }
-        }
-
-        // Fungsi Pencarian yang Aman (Anti-Error Null)
-        function searchTerms() {
-            let inputField = document.getElementById('searchInput');
-            if (!inputField) return;
-            
-            let input = inputField.value.toLowerCase();
-            let cards = document.getElementsByClassName('card');
-
-            for (let i = 0; i < cards.length; i++) {
-                let title = cards[i].getAttribute('data-title');
-                // Pastikan atribut title ada sebelum dibaca
-                let titleText = title ? title.toLowerCase() : "";
-                let contentText = cards[i].innerText.toLowerCase();
-                
-                if (titleText.includes(input) || contentText.includes(input)) {
-                    cards[i].style.display = "";
-                } else {
-                    cards[i].style.display = "none";
-                }
-            }
-        }
-    </script>
-
-
 </body>
 </html>
