@@ -13,14 +13,14 @@
         }
 
         body {
-            background-color: #000000;
-            color: #e0e0e0;
+            background-color: #f4f6f4;
+            color: #2c3e50;
             line-height: 1.6;
             padding-bottom: 60px;
         }
 
         .header {
-            background-color: #000000;
+            background-color: #ffffff;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -28,29 +28,30 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #1a2e22;
+            border-bottom: 1px solid #d8e2dc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
         }
 
         .logo-text {
             font-size: 0.9rem;
             font-weight: 700;
-            color: #52b788;
+            color: #2d6a4f;
             letter-spacing: 0.5px;
             text-transform: uppercase;
             cursor: pointer;
         }
 
         .nav-links a {
-            color: #a3b19b;
+            color: #52796f;
             text-decoration: none;
             margin-left: 10px;
             font-size: 0.73rem;
             cursor: pointer;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         .nav-links a:hover {
-            color: #52b788;
+            color: #2d6a4f;
         }
 
         .page-section {
@@ -68,7 +69,7 @@
             background-position: center;
             padding: 55px 16px 45px 16px;
             text-align: center;
-            border-bottom: 1px solid #1a2e22;
+            border-bottom: 1px solid #d8e2dc;
         }
 
         .hero::before {
@@ -78,7 +79,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(0, 0, 0, 0.82);
+            background-color: rgba(255, 255, 255, 0.88);
             z-index: 1;
         }
 
@@ -89,9 +90,9 @@
 
         .tagline-badge {
             display: inline-block;
-            background-color: #0a140f;
-            color: #52b788;
-            border: 1px solid #2d6a4f;
+            background-color: #e8f5e9;
+            color: #2d6a4f;
+            border: 1px solid #b7e4c7;
             padding: 3px 10px;
             border-radius: 4px;
             font-size: 0.68rem;
@@ -102,14 +103,14 @@
 
         .hero h1 {
             font-size: 1.5rem;
-            color: #ffffff;
+            color: #1b4332;
             font-weight: 700;
             margin-bottom: 4px;
         }
 
         .hero h2 {
             font-size: 0.9rem;
-            color: #a3b19b;
+            color: #52796f;
             font-weight: 400;
             margin-bottom: 16px;
         }
@@ -133,50 +134,57 @@
 
         .section-title {
             font-size: 0.82rem;
-            color: #52b788;
+            color: #2d6a4f;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.8px;
             margin-bottom: 12px;
         }
 
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 12px;
+        /* MENU UTAMA SATU KOLOM LURUS DI SISI KIRI */
+        .cards-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
             margin-bottom: 20px;
         }
 
         .card {
-            background-color: #050a07;
-            border: 1px solid #1a2e22;
-            border-radius: 8px;
-            padding: 14px;
+            background-color: #ffffff;
+            border: 1px solid #d8e2dc;
+            border-left: 4px solid #2d6a4f;
+            border-radius: 6px;
+            padding: 14px 16px;
             cursor: pointer;
+            text-align: left;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+            transition: all 0.2s ease;
         }
 
         .card:hover {
-            border-color: #52b788;
+            border-color: #2d6a4f;
+            background-color: #fafbfc;
         }
 
         .card h3 {
-            font-size: 0.85rem;
-            color: #ffffff;
-            margin-bottom: 4px;
-            font-weight: 600;
+            font-size: 0.9rem;
+            color: #1b4332;
+            margin-bottom: 2px;
+            font-weight: 700;
         }
 
         .card p {
-            font-size: 0.72rem;
-            color: #a3b19b;
+            font-size: 0.75rem;
+            color: #52796f;
         }
 
         .focus-section, .about-box {
-            background-color: #050a07;
-            border: 1px solid #1a2e22;
+            background-color: #ffffff;
+            border: 1px solid #d8e2dc;
             border-radius: 8px;
             padding: 16px;
             margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
         }
 
         .content-header {
@@ -184,14 +192,14 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 14px;
-            border-bottom: 1px solid #1a2e22;
+            border-bottom: 1px solid #d8e2dc;
             padding-bottom: 10px;
         }
 
         .back-btn {
-            background-color: #0a140f;
-            color: #52b788;
-            border: 1px solid #2d6a4f;
+            background-color: #e8f5e9;
+            color: #2d6a4f;
+            border: 1px solid #b7e4c7;
             padding: 5px 12px;
             border-radius: 6px;
             font-size: 0.72rem;
@@ -203,35 +211,40 @@
         .search-box {
             width: 100%;
             padding: 11px 14px;
-            background-color: #050a07;
-            border: 1px solid #2d6a4f;
+            background-color: #ffffff;
+            border: 1px solid #b7e4c7;
             border-radius: 6px;
-            color: #ffffff;
+            color: #2c3e50;
             font-size: 0.82rem;
             margin-bottom: 14px;
             outline: none;
         }
 
+        .search-box:focus {
+            border-color: #2d6a4f;
+        }
+
         .term-item {
-            background-color: #050a07;
-            border: 1px solid #1a2e22;
-            border-left: 3px solid #2d6a4f;
+            background-color: #ffffff;
+            border: 1px solid #d8e2dc;
+            border-left: 3px solid #52796f;
             padding: 12px 14px;
             margin-bottom: 10px;
             border-radius: 0 6px 6px 0;
             cursor: pointer;
-            transition: border-color 0.2s ease;
+            transition: all 0.2s ease;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.01);
         }
 
         .term-item:hover {
-            border-color: #52b788;
-            background-color: #08120b;
+            border-color: #2d6a4f;
+            background-color: #fafbfc;
         }
 
         .term-arabic {
             font-family: 'Amiri', 'Traditional Arabic', serif;
             font-size: 1.1rem;
-            color: #52b788;
+            color: #2d6a4f;
             text-align: right;
             margin-bottom: 3px;
             direction: rtl;
@@ -239,19 +252,19 @@
 
         .term-title {
             font-weight: 700;
-            color: #ffffff;
+            color: #1b4332;
             font-size: 0.88rem;
             margin-bottom: 2px;
         }
 
         .term-desc-short {
             font-size: 0.76rem;
-            color: #a3b19b;
+            color: #4f772d;
         }
 
         .click-hint {
             font-size: 0.65rem;
-            color: #52b788;
+            color: #52796f;
             font-style: italic;
             margin-top: 4px;
             display: inline-block;
@@ -264,7 +277,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.85);
+            background-color: rgba(0, 0, 0, 0.5);
             z-index: 1000;
             justify-content: center;
             align-items: center;
@@ -276,8 +289,8 @@
         }
 
         .modal-content {
-            background-color: #0a140f;
-            border: 1px solid #2d6a4f;
+            background-color: #ffffff;
+            border: 1px solid #b7e4c7;
             border-radius: 10px;
             max-width: 600px;
             width: 100%;
@@ -285,7 +298,7 @@
             overflow-y: auto;
             padding: 20px;
             position: relative;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
 
         .modal-close {
@@ -293,19 +306,19 @@
             top: 12px;
             right: 16px;
             font-size: 1.2rem;
-            color: #a3b19b;
+            color: #52796f;
             cursor: pointer;
             font-weight: bold;
         }
 
         .modal-close:hover {
-            color: #ffffff;
+            color: #1b4332;
         }
 
         .modal-arabic {
             font-family: 'Amiri', 'Traditional Arabic', serif;
             font-size: 1.6rem;
-            color: #52b788;
+            color: #2d6a4f;
             text-align: right;
             margin-bottom: 8px;
             direction: rtl;
@@ -313,25 +326,25 @@
 
         .modal-title {
             font-size: 1.1rem;
-            color: #ffffff;
+            color: #1b4332;
             font-weight: 700;
             margin-bottom: 12px;
-            border-bottom: 1px solid #1a2e22;
+            border-bottom: 1px solid #d8e2dc;
             padding-bottom: 8px;
         }
 
         .modal-body {
             font-size: 0.82rem;
-            color: #d0d0d0;
+            color: #2c3e50;
             line-height: 1.7;
             margin-bottom: 16px;
         }
 
         .modal-source {
             font-size: 0.72rem;
-            color: #52b788;
+            color: #52796f;
             font-style: italic;
-            border-top: 1px dashed #1a2e22;
+            border-top: 1px dashed #d8e2dc;
             padding-top: 8px;
         }
 
@@ -339,8 +352,8 @@
             text-align: center;
             padding: 20px 16px;
             font-size: 0.72rem;
-            color: #6c757d;
-            border-top: 1px solid #1a2e22;
+            color: #7f8c8d;
+            border-top: 1px solid #d8e2dc;
             margin-top: 30px;
         }
     </style>
@@ -351,23 +364,46 @@
         <div class="logo-text" onclick="switchPage('home')">RDA QURAN STUDIO</div>
         <nav class="nav-links">
             <a onclick="switchPage('home')">Beranda</a>
+            <a onclick="switchPage('studi')">Menu Studi</a>
             <a onclick="switchPage('ensiklopedia')">Ensiklopedia</a>
             <a onclick="switchPage('tafsir')">Tafsir</a>
-            <a onclick="switchPage('hadis')">Hadis</a>
         </nav>
     </header>
 
+    <!-- HALAMAN PERTAMA: BERANDA -->
     <div id="page-home" class="page-section active">
         <section class="hero">
             <div class="tagline-badge">Pusat Studi & Ensiklopedia Al-Qur'an Digital</div>
             <h1>Menyelami Makna.</h1>
             <h2>Memperkaya Wawasan Qur'ani.</h2>
-            <a href="#menu-utama" class="hero-btn" onclick="document.getElementById('menu-utama').scrollIntoView({behavior: 'smooth'}); return false;">Jelajahi Studi ➔</a>
+            <!-- Tombol ini sekarang membuka Halaman Kedua (page-studi) -->
+            <a class="hero-btn" onclick="switchPage('studi')">Jelajahi Studi ➔</a>
         </section>
 
-        <main class="main-container" id="menu-utama">
-            <div class="section-title">Menu Utama Studi</div>
-            <div class="cards-grid">
+        <main class="main-container">
+            <div class="focus-section">
+                <h3 style="color: #2d6a4f; font-size: 0.68rem; text-transform: uppercase; margin-bottom: 4px; font-weight: 700;">FOKUS STUDI</h3>
+                <h2 style="font-size: 0.98rem; color: #1b4332; margin-bottom: 6px;">Data, Teks, & Kontekstual. Bekerja Bersama.</h2>
+                <p style="font-size: 0.76rem; color: #52796f;">RDA Quran Studio dirancang khusus untuk membantu mengkaji istilah keagamaan secara praktis, bersih, dan cepat.</p>
+            </div>
+
+            <div class="about-box">
+                <h3 style="color: #1b4332; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 8px; font-weight: 700;">Tentang Kami (About Us)</h3>
+                <p style="font-size: 0.76rem; color: #52796f; margin-bottom: 8px;"><strong>RDA Quran Studio</strong> adalah platform digital berbasis riset akademik yang dirancang khusus untuk memudahkan mahasiswa serta masyarakat umum dalam mendalami khazanah keilmuan Islam secara terstruktur.</p>
+                <p style="margin-bottom: 0; color: #7f8c8d; font-size: 0.72rem;">Dibangun dengan komitmen menyajikan referensi literatur Islam yang kredibel dan mudah diakses melalui perangkat seluler.</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- HALAMAN KEDUA: DAFTAR 4 OPSI STUDI -->
+    <div id="page-studi" class="page-section">
+        <main class="main-container">
+            <div class="content-header">
+                <h2 style="color: #1b4332; font-size: 1rem;">📚 Menu Utama Studi</h2>
+                <a class="back-btn" onclick="switchPage('home')">← Beranda</a>
+            </div>
+
+            <div class="cards-list">
                 <div class="card" onclick="switchPage('ensiklopedia')">
                     <h3>📖 Ensiklopedia</h3>
                     <p>Kamus istilah penting Ulumul Qur'an.</p>
@@ -385,24 +421,12 @@
                     <p>Panduan ringkas hukum bacaan Al-Qur'an.</p>
                 </div>
             </div>
-
-            <div class="focus-section">
-                <h3 style="color: #52b788; font-size: 0.68rem; text-transform: uppercase; margin-bottom: 4px; font-weight: 700;">FOKUS STUDI</h3>
-                <h2 style="font-size: 0.98rem; color: #ffffff; margin-bottom: 6px;">Data, Teks, & Kontekstual. Bekerja Bersama.</h2>
-                <p style="font-size: 0.76rem; color: #a3b19b;">RDA Quran Studio dirancang khusus untuk membantu mengkaji istilah keagamaan secara praktis, bersih, dan cepat.</p>
-            </div>
-
-            <div class="about-box">
-                <h3 style="color: #ffffff; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 8px; font-weight: 700;">Tentang Kami (About Us)</h3>
-                <p style="font-size: 0.76rem; color: #a3b19b; margin-bottom: 8px;"><strong>RDA Quran Studio</strong> adalah platform digital berbasis riset akademik yang dirancang khusus untuk memudahkan mahasiswa serta masyarakat umum dalam mendalami khazanah keilmuan Islam secara terstruktur.</p>
-                <p style="margin-bottom: 0; color: #808080; font-size: 0.72rem;">Dibangun dengan komitmen menyajikan referensi literatur Islam yang kredibel dan mudah diakses melalui perangkat seluler.</p>
-            </div>
         </main>
     </div>
         <div id="page-ensiklopedia" class="page-section">
         <div class="main-container">
             <div class="content-header">
-                <h2 style="color: #ffffff; font-size: 1rem;">📖 Ensiklopedia Ulumul Qur'an</h2>
+                <h2 style="color: #1b4332; font-size: 1rem;">📖 Ensiklopedia Ulumul Qur'an</h2>
                 <a class="back-btn" onclick="switchPage('home')">← Beranda</a>
             </div>
             
@@ -534,7 +558,8 @@
                     <div class="term-desc-short">Kajian kalimat penutup surah Al-Qur'an.</div>
                     <span class="click-hint">Klik untuk penjelasan lengkap ➔</span>
                 </div>
-                                <div class="term-item" onclick="openDetail('\'Aam', 'عام', 'Lafal atau ungkapan umum yang mencakup seluruh individu atau satuan yang termasuk dalam cakupan maknanya tanpa batasan.', 'Al-Mustasfa min Ilm al-Usul (Imam al-Ghazali)')">
+
+                <div class="term-item" onclick="openDetail('\'Aam', 'عام', 'Lafal atau ungkapan umum yang mencakup seluruh individu atau satuan yang termasuk dalam cakupan maknanya tanpa batasan.', 'Al-Mustasfa min Ilm al-Usul (Imam al-Ghazali)')">
                     <div class="term-arabic">عام</div>
                     <div class="term-title">'Aam</div>
                     <div class="term-desc-short">Lafal umum yang mencakup semua individu anggotanya.</div>
@@ -652,7 +677,8 @@
                     <div class="term-desc-short">Persamaan kata atau sinonim dalam kebahasaan.</div>
                     <span class="click-hint">Klik untuk penjelasan lengkap ➔</span>
                 </div>
-                                <div class="term-item" onclick="openDetail('Tafsir Bil-Ma\'tsur', 'التفسير بالمأثور', 'Metode penafsiran Al-Qur\'an yang bersumber dari penjelasan Al-Qur\'an sendiri, hadis Nabi, penafsiran sahabat, serta tabiin.', 'Al-Tafsir wa al-Mufasirun (Muhammad Husain al-Dzahabi)')">
+
+                <div class="term-item" onclick="openDetail('Tafsir Bil-Ma\'tsur', 'التفسير بالمأثور', 'Metode penafsiran Al-Qur\'an yang bersumber dari penjelasan Al-Qur\'an sendiri, hadis Nabi, penafsiran sahabat, serta tabiin.', 'Al-Tafsir wa al-Mufasirun (Muhammad Husain al-Dzahabi)')">
                     <div class="term-arabic">التفسير بالمأثور</div>
                     <div class="term-title">Tafsir Bil-Ma'tsur</div>
                     <div class="term-desc-short">Tafsir berbasis riwayat teks Al-Qur'an & Hadis.</div>
@@ -762,7 +788,7 @@
         <div id="page-tafsir" class="page-section">
         <div class="main-container">
             <div class="content-header">
-                <h2 style="color: #ffffff; font-size: 1rem;">🔍 Kajian Tafsir</h2>
+                <h2 style="color: #1b4332; font-size: 1rem;">🔍 Kajian Tafsir</h2>
                 <a class="back-btn" onclick="switchPage('home')">← Beranda</a>
             </div>
             <div class="term-item">
@@ -779,7 +805,7 @@
     <div id="page-hadis" class="page-section">
         <div class="main-container">
             <div class="content-header">
-                <h2 style="color: #ffffff; font-size: 1rem;">📜 Pengantar Ilmu Hadis</h2>
+                <h2 style="color: #1b4332; font-size: 1rem;">📜 Pengantar Ilmu Hadis</h2>
                 <a class="back-btn" onclick="switchPage('home')">← Beranda</a>
             </div>
             <div class="term-item">
@@ -803,7 +829,7 @@
     <div id="page-tajwid" class="page-section">
         <div class="main-container">
             <div class="content-header">
-                <h2 style="color: #ffffff; font-size: 1rem;">✨ Dasar Ilmu Tajwid</h2>
+                <h2 style="color: #1b4332; font-size: 1rem;">✨ Dasar Ilmu Tajwid</h2>
                 <a class="back-btn" onclick="switchPage('home')">← Beranda</a>
             </div>
             <div class="term-item">
@@ -874,3 +900,4 @@
     </script>
 </body>
 </html>
+                
