@@ -785,21 +785,187 @@
             </div>
         </div>
     </div>
-        <div id="page-tafsir" class="page-section">
-        <div class="main-container">
+                     <div id="page-tafsir" class="page-section">
+        <main class="main-container">
             <div class="content-header">
-                <h2 style="color: #1b4332; font-size: 1rem;">🔍 Kajian Tafsir</h2>
-                <a class="back-btn" onclick="switchPage('home')">← Beranda</a>
+                <h2 style="color: #1b4332; font-size: 1rem;">🔍 Kajian Tafsir & Metodologi</h2>
+                <a class="back-btn" onclick="switchPage('studi')">← Menu Studi</a>
             </div>
-            <div class="term-item">
-                <div class="term-title">Tafsir Tahlili</div>
-                <div class="term-desc-short">Metode penafsiran mendalam ayat demi ayat sesuai urutan mushaf.</div>
+
+            <div class="cards-list">
+                <div class="card" onclick="switchPage('epistemologi-menu')">
+                    <h3>🗺️ 1. Peta Epistemologi Tafsir</h3>
+                    <p>Mengkaji perjalanan sejarah dari masa Nabi, sahabat, tabi'in, hingga era kontemporer.</p>
+                </div>
+                <div class="card" onclick="alert('Galeri Tafsir akan segera hadir dalam pembaruan berikutnya!')">
+                    <h3>🖼️ 2. Galeri Tafsir</h3>
+                    <p>Visualisasi manuskrip kuno dan peta sebaran mazhab mufasir dunia Islam.</p>
+                </div>
+                <div class="card" onclick="alert('Anatomi Penafsiran Ayat akan segera hadir dalam pembaruan berikutnya!')">
+                    <h3>🔬 3. Anatomi Penafsiran Ayat</h3>
+                    <p>Bedah struktur teks, kosa kata, dan pisau analisis mufasir terhadap ayat-ayat tematik.</p>
+                </div>
             </div>
-            <div class="term-item">
-                <div class="term-title">Tafsir Maudhu'i (Tematik)</div>
-                <div class="term-desc-short">Metode penafsiran tematik yang menghimpun ayat dari satu topik khusus.</div>
+        </main>
+    </div>
+        <div id="page-epistemologi-menu" class="page-section">
+        <main class="main-container">
+            <div class="content-header">
+                <h2 style="color: #1b4332; font-size: 1rem;">🗺️ Peta Epistemologi Tafsir</h2>
+                <a class="back-btn" onclick="switchPage('tafsir')">← Kajian Tafsir</a>
             </div>
-        </div>
+
+            <p style="font-size: 0.78rem; color: #52796f; margin-bottom: 14px;">
+                Pilih fase sejarah perkembangan tafsir di bawah ini untuk melihat detail karakteristik, jaringan sanad, dan peta konsepnya:
+            </p>
+
+            <div class="cards-list">
+                <div class="card" onclick="switchPage('fase-formatif')">
+                    <h3>🌱 1. Fase Formatif (Era Sahabat & Tabi'in)</h3>
+                    <p>Karakteristik periwayatan lisan, penjelasan langsung, & otoritas awal.</p>
+                </div>
+                <div class="card" onclick="alert('Modul Fase Kodifikasi & Klasik akan segera dibuka!')">
+                    <h3>📚 2. Fase Kodifikasi & Klasik</h3>
+                    <p>Pembukuan sistematis, lahirnya korpus tafsir, bil-ma'tsur & bir-ra'yi.</p>
+                </div>
+                <div class="card" onclick="alert('Modul Fase Kontemporer akan segera dibuka!')">
+                    <h3>💡 3. Fase Kontemporer / Modern</h3>
+                    <p>Orientasi sosial (adabi ijtima'i), metode tematik, & kritik hermeneutika.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+        <div id="page-fase-formatif" class="page-section">
+        <main class="main-container">
+            <div class="content-header">
+                <h2 style="color: #1b4332; font-size: 1rem;">🌱 Fase Formatif (Era Sahabat & Tabi'in)</h2>
+                <a class="back-btn" onclick="switchPage('epistemologi-menu')">← Kembali</a>
+            </div>
+
+            <!-- CSS Khusus Peta Konsep Berpanah -->
+            <style>
+                .flow-box {
+                    background-color: #ffffff;
+                    border: 1px solid #b7e4c7;
+                    border-left: 4px solid #2d6a4f;
+                    border-radius: 6px;
+                    padding: 12px 14px;
+                    margin-bottom: 10px;
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+                }
+                .flow-arrow {
+                    text-align: center;
+                    color: #2d6a4f;
+                    font-weight: bold;
+                    font-size: 1.1rem;
+                    margin: 4px 0;
+                }
+                .flow-title {
+                    font-size: 0.82rem;
+                    font-weight: 700;
+                    color: #1b4332;
+                    margin-bottom: 4px;
+                }
+                .flow-desc {
+                    font-size: 0.75rem;
+                    color: #52796f;
+                    line-height: 1.5;
+                }
+            </style>
+
+            <!-- Penjelasan Singkat Naratif -->
+            <div class="about-box" style="margin-bottom: 16px;">
+                <h3 style="color: #1b4332; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 6px; font-weight: 700;">Pengantar Fase</h3>
+                <p style="font-size: 0.76rem; color: #52796f; line-height: 1.6;">
+                    Fase formatif adalah fondasi awal pertumbuhan ilmu tafsir. Pada masa ini, penafsiran Al-Qur'an belum dibukukan secara mandiri, melainkan disampaikan secara lisan (riwayat syafahi) langsung dari Nabi Muhammad SAW kepada para sahabat, lalu diteruskan ke generasi tabi'in.
+                </p>
+            </div>
+
+            <!-- PETA KONSEP BERPANAH-PANAH -->
+            <div class="section-title">Peta Konsep Alur & Karakteristik</div>
+            
+            <div class="flow-box">
+                <div class="flow-title">1. Sumber & Karakteristik Pokok</div>
+                <div class="flow-desc">Bersumber langsung dari penjelasan Nabi SAW, pemahaman kontekstual sahabat terhadap asbabun nuzul, dan riwayat lisan murni tanpa pembukuan sistematis.</div>
+            </div>
+
+            <div class="flow-arrow">↓</div>
+
+            <div class="flow-box">
+                <div class="flow-title">2. Jaringan Sanad & Madrasah Utama</div>
+                <div class="flow-desc">
+                    • <strong>Madrasah Makkah:</strong> Dipimpin Abdullah bin Abbas.<br>
+                    • <strong>Madrasah Madinah:</strong> Dipimpin Ubay bin Ka'ab.<br>
+                    • <strong>Madrasah Iraq (Kuffah):</strong> Dipimpin Abdullah bin Mas'ud.
+                </div>
+            </div>
+
+            <div class="flow-arrow">↓</div>
+
+            <div class="flow-box">
+                <div class="flow-title">3. Tokoh & Hubungan Guru-Murid</div>
+                <div class="flow-desc">
+                    • <em>Ibnu Abbas</em> (Guru) ➔ melahirkan murid seperti <strong>Mujahid bin Jabar, Ikrimah, & Thawus</strong>.<br>
+                    • <em>Abdullah bin Mas'ud</em> (Guru) ➔ melahirkan murid seperti <strong>Al-Qamah bin Qais & Al-Aswad</strong>.
+                </div>
+            </div>
+
+            <div class="flow-arrow">↓</div>
+
+            <div class="flow-box">
+                <div class="flow-title">4. Corak Periwayatan (Bil-Ma'tsur)</div>
+                <div class="flow-desc">Dominan menggunakan pendekatan riwayat teks (tafsir ayat dengan ayat, atau ayat dengan hadis Nabi dan atsar sahabat).</div>
+            </div>
+
+        </main>
+    </div>
+    
+        <div id="page-epistemologi" class="page-section">
+        <main class="main-container">
+            <div class="content-header">
+                <h2 style="color: #1b4332; font-size: 1rem;">🗺️ Peta Epistemologi Tafsir</h2>
+                <a class="back-btn" onclick="switchPage('tafsir')">← Kajian Tafsir</a>
+            </div>
+
+            <div class="focus-section" style="margin-bottom: 16px;">
+                <p style="font-size: 0.78rem; color: #2c3e50; line-height: 1.7;">
+                    Modul ini memetakan perjalanan historis, epistemologis, dan metodologis perkembangan tafsir Al-Qur'an dari masa formatif hingga era kontemporer secara sistematis.
+                </p>
+            </div>
+
+            <!-- Poin 1 & 5: Fase & Karakteristik -->
+            <div class="about-box" style="margin-bottom: 14px;">
+                <h3 style="color: #1b4332; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 8px; font-weight: 700;">1. Fase & Karakteristik Penafsiran</h3>
+                <p style="font-size: 0.76rem; color: #52796f; margin-bottom: 6px;">• <strong>Fase Formatif (Era Nabi & Sahabat):</strong> Bersifat lisan (riwayat), penjelasan global, dan langsung merujuk pada konteks turunnya ayat (asbabun nuzul).</p>
+                <p style="font-size: 0.76rem; color: #52796f; margin-bottom: 6px;">• <strong>Fase Kodifikasi (Klasik):</strong> Pembukuan resmi disiplin ilmu tafsir, penguatan kaidah bahasa Arab, qira'at, serta pemisahan antara riwayat (*ma'tsur*) dan ijtihad (*ra'yi*).</p>
+                <p style="font-size: 0.76rem; color: #52796f; margin-bottom: 0;">• <strong>Fase Kontemporer / Modern:</strong> Berorientasi pada solusi problem sosial kemasyarakatan (*adabi ijtima'i*), metode tematik (*maudhu'i*), hingga pisau analisis hermeneutika.</p>
+            </div>
+
+            <!-- Poin 2 & 3: Tokoh & Hubungan Guru-Murid (Sanad) -->
+            <div class="about-box" style="margin-bottom: 14px;">
+                <h3 style="color: #1b4332; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 8px; font-weight: 700;">2. Tokoh Utama & Jaringan Sanad (Guru-Murid)</h3>
+                <p style="font-size: 0.76rem; color: #52796f; margin-bottom: 6px;">• <strong>Madrasah Makkah:</strong> Dipimpin oleh <em>Abdullah bin Abbas</em> (Bahrul Ummah), menurunkan murid-murid hebat seperti Mujahid bin Jabar, Ikrimah, dan Thawus bin Kaisan.</p>
+                <p style="font-size: 0.76rem; color: #52796f; margin-bottom: 6px;">• <strong>Madrasah Madinah:</strong> Dipimpin oleh <em>Ubay bin Ka'ab</em>, menurunkan tokoh seperti Muhammad bin Ka'ab dan Zaid bin Aslam.</p>
+                <p style="font-size: 0.76rem; color: #52796f; margin-bottom: 0;">• <strong>Madrasah Iraq (Kuffah):</strong> Dipimpin oleh <em>Abdullah bin Mas'ud</em>, menurunkan Al-Qamah bin Qais dan Al-Aswad bin Yazid.</p>
+            </div>
+
+            <!-- Poin 4: Karya-Karya Tafsir -->
+            <div class="about-box" style="margin-bottom: 14px;">
+                <h3 style="color: #1b4332; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 8px; font-weight: 700;">3. Korpus Karya Tafsir Klasik & Modern</h3>
+                <p style="font-size: 0.76rem; color: #52796f; margin-bottom: 6px;">• <em>Jami' al-Bayan fi Ta'wil al-Qur'an</em> (Ibnu Jarir al-Thabari) - Primadona tafsir bil-ma'tsur.</p>
+                <p style="font-size: 0.76rem; color: #52796f; margin-bottom: 6px;">• <em>Al-Kasysyaf 'an Haqa'iq Ghawamid al-Tanzil</em> (Al-Zamakhsyari) - Representasi tafsir kebahasaan & teologis.</p>
+                <p style="font-size: 0.76rem; color: #52796f; margin-bottom: 6px;">• <em>Tafsir al-Qur'an al-Azhim</em> (Ibnu Katsir) - Rujukan utama berbasis riwayat salaf.</p>
+                <p style="font-size: 0.76rem; color: #52796f; margin-bottom: 0;">• <em>Tafsir al-Manar</em> (Muhammad Abduh / Rasyid Ridha) - Pelopor corak modern sosial-keagamaan.</p>
+            </div>
+
+            <!-- Poin 6: Sumber dan Corak Periwayatan -->
+            <div class="about-box" style="margin-bottom: 0;">
+                <h3 style="color: #1b4332; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 8px; font-weight: 700;">4. Sumber & Corak Periwayatan Utama</h3>
+                <p style="font-size: 0.76rem; color: #52796f; margin-bottom: 6px;">• <strong>Bil-Ma'tsur:</strong> Bersandar pada Al-Qur'an, Hadis, dan Atsar Sahabat.</p>
+                <p style="font-size: 0.76rem; color: #52796f; margin-bottom: 6px;">• <strong>Bir-Ra'yi:</strong> Bersandar pada ijtihad rasional yang memenuhi syarat keilmuan bahasa.</p>
+                <p style="font-size: 0.76rem; color: #52796f; margin-bottom: 0;">• <strong>Corak Khusus:</strong> Fiqhi (hukum), Lughawi (kebahasaan), Falsafi (filsafat), Sufi/Isyari (tasawuf), dan Adabi Ijtima'i (sosial).</p>
+            </div>
+        </main>
     </div>
 
     <div id="page-hadis" class="page-section">
@@ -855,15 +1021,15 @@
 
     <script>
         function switchPage(pageName) {
-            const pages = document.querySelectorAll('.page-section');
-            pages.forEach(p => p.classList.remove('active'));
+    const pages = document.querySelectorAll('.page-section');
+    pages.forEach(p => p.classList.remove('active'));
 
-            const target = document.getElementById('page-' + pageName);
-            if (target) {
-                target.classList.add('active');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-        }
+    const target = document.getElementById('page-' + pageName);
+    if (target) {
+        target.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+}
 
         function searchTerms() {
             let input = document.getElementById('searchInput').value.toLowerCase();
