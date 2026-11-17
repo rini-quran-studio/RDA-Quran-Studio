@@ -3,359 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RDA Quran Studio</title>
+    <title>RDA Quran Studio - Portal Studi Ilmu Al-Qur'an & Tafsir</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        body {
-            background-color: #f4f6f4;
-            color: #2c3e50;
-            line-height: 1.6;
-            padding-bottom: 60px;
-        }
-
-        .header {
-            background-color: #ffffff;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            padding: 14px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #d8e2dc;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
-        }
-
-        .logo-text {
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: #2d6a4f;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            cursor: pointer;
-        }
-
-        .nav-links a {
-            color: #52796f;
-            text-decoration: none;
-            margin-left: 10px;
-            font-size: 0.73rem;
-            cursor: pointer;
-            font-weight: 600;
-        }
-
-        .nav-links a:hover {
-            color: #2d6a4f;
-        }
-
-        .page-section {
-            display: none;
-        }
-
-        .page-section.active {
-            display: block;
-        }
-
-        .hero {
-            position: relative;
-            background-image: url('banner-rda.jpg');
-            background-size: cover;
-            background-position: center;
-            padding: 55px 16px 45px 16px;
-            text-align: center;
-            border-bottom: 1px solid #d8e2dc;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(255, 255, 255, 0.88);
-            z-index: 1;
-        }
-
-        .hero > * {
-            position: relative;
-            z-index: 2;
-        }
-
-        .tagline-badge {
-            display: inline-block;
-            background-color: #e8f5e9;
-            color: #2d6a4f;
-            border: 1px solid #b7e4c7;
-            padding: 3px 10px;
-            border-radius: 4px;
-            font-size: 0.68rem;
-            margin-bottom: 10px;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-
-        .hero h1 {
-            font-size: 1.5rem;
-            color: #1b4332;
-            font-weight: 700;
-            margin-bottom: 4px;
-        }
-
-        .hero h2 {
-            font-size: 0.9rem;
-            color: #52796f;
-            font-weight: 400;
-            margin-bottom: 16px;
-        }
-
-        .hero-btn {
-            display: inline-block;
-            background-color: #2d6a4f;
-            color: white;
-            padding: 7px 16px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.78rem;
-        }
-
-        .main-container {
-            max-width: 850px;
-            margin: 0 auto;
-            padding: 20px 16px;
-        }
-
-        .section-title {
-            font-size: 0.82rem;
-            color: #2d6a4f;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-            margin-bottom: 12px;
-        }
-
-        /* MENU UTAMA SATU KOLOM LURUS DI SISI KIRI */
-        .cards-list {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-
-        .card {
-            background-color: #ffffff;
-            border: 1px solid #d8e2dc;
-            border-left: 4px solid #2d6a4f;
-            border-radius: 6px;
-            padding: 14px 16px;
-            cursor: pointer;
-            text-align: left;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
-            transition: all 0.2s ease;
-        }
-
-        .card:hover {
-            border-color: #2d6a4f;
-            background-color: #fafbfc;
-        }
-
-        .card h3 {
-            font-size: 0.9rem;
-            color: #1b4332;
-            margin-bottom: 2px;
-            font-weight: 700;
-        }
-
-        .card p {
-            font-size: 0.75rem;
-            color: #52796f;
-        }
-
-        .focus-section, .about-box {
-            background-color: #ffffff;
-            border: 1px solid #d8e2dc;
-            border-radius: 8px;
-            padding: 16px;
-            margin-bottom: 20px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
-        }
-
-        .content-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 14px;
-            border-bottom: 1px solid #d8e2dc;
-            padding-bottom: 10px;
-        }
-
-        .back-btn {
-            background-color: #e8f5e9;
-            color: #2d6a4f;
-            border: 1px solid #b7e4c7;
-            padding: 5px 12px;
-            border-radius: 6px;
-            font-size: 0.72rem;
-            cursor: pointer;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .search-box {
-            width: 100%;
-            padding: 11px 14px;
-            background-color: #ffffff;
-            border: 1px solid #b7e4c7;
-            border-radius: 6px;
-            color: #2c3e50;
-            font-size: 0.82rem;
-            margin-bottom: 14px;
-            outline: none;
-        }
-
-        .search-box:focus {
-            border-color: #2d6a4f;
-        }
-
-        .term-item {
-            background-color: #ffffff;
-            border: 1px solid #d8e2dc;
-            border-left: 3px solid #52796f;
-            padding: 12px 14px;
-            margin-bottom: 10px;
-            border-radius: 0 6px 6px 0;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.01);
-        }
-
-        .term-item:hover {
-            border-color: #2d6a4f;
-            background-color: #fafbfc;
-        }
-
-        .term-arabic {
-            font-family: 'Amiri', 'Traditional Arabic', serif;
-            font-size: 1.1rem;
-            color: #2d6a4f;
-            text-align: right;
-            margin-bottom: 3px;
-            direction: rtl;
-        }
-
-        .term-title {
-            font-weight: 700;
-            color: #1b4332;
-            font-size: 0.88rem;
-            margin-bottom: 2px;
-        }
-
-        .term-desc-short {
-            font-size: 0.76rem;
-            color: #4f772d;
-        }
-
-        .click-hint {
-            font-size: 0.65rem;
-            color: #52796f;
-            font-style: italic;
-            margin-top: 4px;
-            display: inline-block;
-        }
-
-        .modal-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-            padding: 16px;
-        }
-
-        .modal-overlay.active {
-            display: flex;
-        }
-
-        .modal-content {
-            background-color: #ffffff;
-            border: 1px solid #b7e4c7;
-            border-radius: 10px;
-            max-width: 600px;
-            width: 100%;
-            max-height: 85vh;
-            overflow-y: auto;
-            padding: 20px;
-            position: relative;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 12px;
-            right: 16px;
-            font-size: 1.2rem;
-            color: #52796f;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .modal-close:hover {
-            color: #1b4332;
-        }
-
-        .modal-arabic {
-            font-family: 'Amiri', 'Traditional Arabic', serif;
-            font-size: 1.6rem;
-            color: #2d6a4f;
-            text-align: right;
-            margin-bottom: 8px;
-            direction: rtl;
-        }
-
-        .modal-title {
-            font-size: 1.1rem;
-            color: #1b4332;
-            font-weight: 700;
-            margin-bottom: 12px;
-            border-bottom: 1px solid #d8e2dc;
-            padding-bottom: 8px;
-        }
-
-        .modal-body {
-            font-size: 0.82rem;
-            color: #2c3e50;
-            line-height: 1.7;
-            margin-bottom: 16px;
-        }
-
-        .modal-source {
-            font-size: 0.72rem;
-            color: #52796f;
-            font-style: italic;
-            border-top: 1px dashed #d8e2dc;
-            padding-top: 8px;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 20px 16px;
-            font-size: 0.72rem;
-            color: #7f8c8d;
-            border-top: 1px solid #d8e2dc;
-            margin-top: 30px;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: #f4f6f4; color: #2c3e50; line-height: 1.6; padding-bottom: 60px; }
+        .header { background-color: #ffffff; position: sticky; top: 0; z-index: 100; padding: 14px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #d8e2dc; box-shadow: 0 2px 4px rgba(0,0,0,0.03); }
+        .logo-text { font-size: 0.9rem; font-weight: 700; color: #2d6a4f; letter-spacing: 0.5px; text-transform: uppercase; cursor: pointer; }
+        .nav-links a { color: #52796f; text-decoration: none; margin-left: 10px; font-size: 0.73rem; cursor: pointer; font-weight: 600; }
+        .nav-links a:hover { color: #2d6a4f; }
+        .page-section { display: none; }
+        .page-section.active { display: block; }
+        .hero { position: relative; background-image: url('banner-rda.jpg'); background-size: cover; background-position: center; padding: 55px 16px 45px 16px; text-align: center; border-bottom: 1px solid #d8e2dc; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(255, 255, 255, 0.88); z-index: 1; }
+        .hero > * { position: relative; z-index: 2; }
+        .tagline-badge { display: inline-block; background-color: #e8f5e9; color: #2d6a4f; border: 1px solid #b7e4c7; padding: 3px 10px; border-radius: 4px; font-size: 0.68rem; margin-bottom: 10px; font-weight: 600; text-transform: uppercase; }
+        .hero h1 { font-size: 1.5rem; color: #1b4332; font-weight: 700; margin-bottom: 4px; }
+        .hero h2 { font-size: 0.9rem; color: #52796f; font-weight: 400; margin-bottom: 16px; }
+        .hero-btn { display: inline-block; background-color: #2d6a4f; color: white; padding: 7px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.78rem; cursor: pointer; }
+        .main-container { max-width: 850px; margin: 0 auto; padding: 20px 16px; }
+        .cards-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+        .card { background-color: #ffffff; border: 1px solid #d8e2dc; border-left: 4px solid #2d6a4f; border-radius: 6px; padding: 14px 16px; cursor: pointer; text-align: left; box-shadow: 0 1px 3px rgba(0,0,0,0.02); }
+        .card h3 { font-size: 0.9rem; color: #1b4332; margin-bottom: 2px; font-weight: 700; }
+        .card p { font-size: 0.75rem; color: #52796f; }
+        .focus-section, .about-box { background-color: #ffffff; border: 1px solid #d8e2dc; border-radius: 8px; padding: 16px; margin-bottom: 20px; }
+        .content-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; border-bottom: 1px solid #d8e2dc; padding-bottom: 10px; }
+        .back-btn { background-color: #e8f5e9; color: #2d6a4f; border: 1px solid #b7e4c7; padding: 5px 12px; border-radius: 6px; font-size: 0.72rem; cursor: pointer; text-decoration: none; font-weight: 600; }
+        .search-box { width: 100%; padding: 11px 14px; background-color: #ffffff; border: 1px solid #b7e4c7; border-radius: 6px; font-size: 0.82rem; margin-bottom: 14px; outline: none; }
+        .term-item { background-color: #ffffff; border: 1px solid #d8e2dc; border-left: 3px solid #52796f; padding: 12px 14px; margin-bottom: 10px; border-radius: 0 6px 6px 0; cursor: pointer; transition: all 0.2s ease; }
+        .term-item:hover { border-color: #2d6a4f; background-color: #fafbfc; }
+        .term-arabic { font-family: 'Amiri', 'Traditional Arabic', serif; font-size: 1.1rem; color: #2d6a4f; text-align: right; margin-bottom: 3px; direction: rtl; }
+        .term-title { font-weight: 700; color: #1b4332; font-size: 0.88rem; margin-bottom: 2px; }
+        .term-desc-short { font-size: 0.76rem; color: #4f772d; }
+        .click-hint { font-size: 0.65rem; color: #52796f; font-style: italic; margin-top: 4px; display: inline-block; }
+        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1000; justify-content: center; align-items: center; padding: 16px; }
+        .modal-overlay.active { display: flex; }
+        .modal-content { background-color: #ffffff; border: 1px solid #b7e4c7; border-radius: 10px; max-width: 600px; width: 100%; max-height: 85vh; overflow-y: auto; padding: 20px; position: relative; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); }
+        .modal-close { position: absolute; top: 12px; right: 16px; font-size: 1.2rem; color: #52796f; cursor: pointer; font-weight: bold; }
+        .modal-arabic { font-family: 'Amiri', serif; font-size: 1.6rem; color: #2d6a4f; text-align: right; margin-bottom: 8px; direction: rtl; }
+        .modal-title { font-size: 1.1rem; color: #1b4332; font-weight: 700; margin-bottom: 12px; border-bottom: 1px solid #d8e2dc; padding-bottom: 8px; }
+        .modal-body { font-size: 0.82rem; color: #2c3e50; line-height: 1.7; margin-bottom: 16px; }
+        .modal-source { font-size: 0.72rem; color: #52796f; font-style: italic; border-top: 1px dashed #d8e2dc; padding-top: 8px; }
+        .sec-card { background-color: #ffffff; border: 1px solid #d8e2dc; border-radius: 8px; padding: 14px; margin-bottom: 14px; }
+        .sec-title { font-size: 0.85rem; font-weight: 700; color: #1b4332; margin-bottom: 8px; border-bottom: 1px solid #e8f5e9; padding-bottom: 4px; }
+        .sec-text { font-size: 0.76rem; color: #3d5a4c; line-height: 1.65; margin-bottom: 8px; }
+        .sec-list { padding-left: 16px; margin-bottom: 8px; font-size: 0.75rem; color: #3d5a4c; line-height: 1.6; }
+        .sec-list li { margin-bottom: 4px; }
+        .arabic-quote { background-color: #f8fbf9; border-right: 3px solid #2d6a4f; padding: 10px 12px; border-radius: 4px; text-align: right; font-size: 1.15rem; color: #1b4332; margin: 8px 0; line-height: 1.8; }
+        .flow-box { background-color: #f8fbf9; border: 1px solid #b7e4c7; border-left: 4px solid #2d6a4f; border-radius: 6px; padding: 10px 12px; margin-bottom: 6px; }
+        .flow-arrow { text-align: center; color: #2d6a4f; font-weight: bold; font-size: 1rem; margin: 2px 0 6px 0; }
+        .comp-table { width: 100%; border-collapse: collapse; font-size: 0.72rem; margin-top: 6px; }
+        .comp-table th { background-color: #2d6a4f; color: #ffffff; padding: 8px; text-align: left; }
+        .comp-table td { border: 1px solid #d8e2dc; padding: 7px 8px; color: #3d5a4c; }
+        .comp-table tr:nth-child(even) { background-color: #f8fbf9; }
+        .footer { text-align: center; padding: 20px 16px; font-size: 0.72rem; color: #7f8c8d; border-top: 1px solid #d8e2dc; margin-top: 30px; }
     </style>
 </head>
 <body>
@@ -370,13 +71,12 @@
         </nav>
     </header>
 
-    <!-- HALAMAN PERTAMA: BERANDA -->
+    <!-- HALAMAN BERANDA -->
     <div id="page-home" class="page-section active">
         <section class="hero">
             <div class="tagline-badge">Pusat Studi & Ensiklopedia Al-Qur'an Digital</div>
             <h1>Menyelami Makna.</h1>
             <h2>Memperkaya Wawasan Qur'ani.</h2>
-            <!-- Tombol ini sekarang membuka Halaman Kedua (page-studi) -->
             <a class="hero-btn" onclick="switchPage('studi')">Jelajahi Studi ➔</a>
         </section>
 
@@ -395,7 +95,7 @@
         </main>
     </div>
 
-    <!-- HALAMAN KEDUA: DAFTAR 4 OPSI STUDI -->
+    <!-- HALAMAN MENU STUDI -->
     <div id="page-studi" class="page-section">
         <main class="main-container">
             <div class="content-header">
@@ -423,11 +123,12 @@
             </div>
         </main>
     </div>
-        <div id="page-ensiklopedia" class="page-section">
+    <!-- HALAMAN ENSIKLOPEDIA (LENGKAP DENGAN 50+ ISTILAH & MODAL KLIK) -->
+    <div id="page-ensiklopedia" class="page-section">
         <div class="main-container">
             <div class="content-header">
                 <h2 style="color: #1b4332; font-size: 1rem;">📖 Ensiklopedia Ulumul Qur'an</h2>
-                <a class="back-btn" onclick="switchPage('home')">← Beranda</a>
+                <a class="back-btn" onclick="switchPage('studi')">← Menu Studi</a>
             </div>
             
             <input type="text" id="searchInput" class="search-box" placeholder="🔍 Cari istilah (Cth: Asbabun Nuzul)..." onkeyup="searchTerms()">
@@ -653,7 +354,7 @@
                 <div class="term-item" onclick="openDetail('Mubayyan', 'مبين', 'Lafal atau hukum yang penjelasannya sudah terang, lengkap, dan gamblang sehingga tidak menyisakan keraguan.', 'Al-Ihkam fi Usul al-Ahkam (Al-Amidi)')">
                     <div class="term-arabic">مبين</div>
                     <div class="term-title">Mubayyan</div>
-                    <div class="term-desc-short">Lafal yang sudah dijelaskan secara terperinci.</div>
+      <div class="term-desc-short">Lafal yang sudah dijelaskan secara terperinci.</div>
                     <span class="click-hint">Klik untuk penjelasan lengkap ➔</span>
                 </div>
 
@@ -718,9 +419,8 @@
                     <div class="term-title">Muqaran</div>
                     <div class="term-desc-short">Metode penafsiran komparatif membandingkan pendapat.</div>
                     <span class="click-hint">Klik untuk penjelasan lengkap ➔</span>
-                </div>
-
-                <div class="term-item" onclick="openDetail('Ijmali', 'التفسير الإجمالي', 'Metode penafsiran global dan ringkas dengan menyajikan garis besar kandungan ayat secara mudah dipahami pembaca awam.', 'Manhaj al-Madrasah al-Aqliyah (Fahd al-Rumi)')">
+                </div> 
+                 <div class="term-item" onclick="openDetail('Ijmali', 'التفسير الإجمالي', 'Metode penafsiran global dan ringkas dengan menyajikan garis besar kandungan ayat secara mudah dipahami pembaca awam.', 'Manhaj al-Madrasah al-Aqliyah (Fahd al-Rumi)')">
                     <div class="term-arabic">التفسير الإجمالي</div>
                     <div class="term-title">Ijmali</div>
                     <div class="term-desc-short">Penjelasan kandungan ayat secara global dan ringkas.</div>
@@ -785,7 +485,8 @@
             </div>
         </div>
     </div>
-                     <div id="page-tafsir" class="page-section">
+        <!-- MENU KAJIAN TAFSIR -->
+    <div id="page-tafsir" class="page-section">
         <main class="main-container">
             <div class="content-header">
                 <h2 style="color: #1b4332; font-size: 1rem;">🔍 Kajian Tafsir & Metodologi</h2>
@@ -808,7 +509,9 @@
             </div>
         </main>
     </div>
-        <div id="page-epistemologi-menu" class="page-section">
+
+    <!-- SUB-MENU PETA EPISTEMOLOGI -->
+    <div id="page-epistemologi-menu" class="page-section">
         <main class="main-container">
             <div class="content-header">
                 <h2 style="color: #1b4332; font-size: 1rem;">🗺️ Peta Epistemologi Tafsir</h2>
@@ -824,7 +527,7 @@
                     <h3>🌱 1. Fase Formatif (Era Sahabat & Tabi'in)</h3>
                     <p>Karakteristik periwayatan lisan, penjelasan langsung, & otoritas awal.</p>
                 </div>
-                <div class="card" onclick="alert('Modul Fase Kodifikasi & Klasik akan segera dibuka!')">
+                <div class="card" onclick="switchPage('fase-kodifikasi')">
                     <h3>📚 2. Fase Kodifikasi & Klasik</h3>
                     <p>Pembukuan sistematis, lahirnya korpus tafsir, bil-ma'tsur & bir-ra'yi.</p>
                 </div>
@@ -835,176 +538,163 @@
             </div>
         </main>
     </div>
-        <div id="page-fase-formatif" class="page-section">
+
+    <!-- HALAMAN FASE FORMATIF (BAGIAN 1) -->
+    <div id="page-fase-formatif" class="page-section">
         <main class="main-container">
             <div class="content-header">
                 <h2 style="color: #1b4332; font-size: 1rem;">🌱 Fase Formatif (Era Sahabat & Tabi'in)</h2>
                 <a class="back-btn" onclick="switchPage('epistemologi-menu')">← Kembali</a>
             </div>
 
-            <!-- CSS Khusus Peta Konsep Berpanah -->
-            <style>
-                .flow-box {
-                    background-color: #ffffff;
-                    border: 1px solid #b7e4c7;
-                    border-left: 4px solid #2d6a4f;
-                    border-radius: 6px;
-                    padding: 12px 14px;
-                    margin-bottom: 10px;
-                    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
-                }
-                .flow-arrow {
-                    text-align: center;
-                    color: #2d6a4f;
-                    font-weight: bold;
-                    font-size: 1.1rem;
-                    margin: 4px 0;
-                }
-                .flow-title {
-                    font-size: 0.82rem;
-                    font-weight: 700;
-                    color: #1b4332;
-                    margin-bottom: 4px;
-                }
-                .flow-desc {
-                    font-size: 0.75rem;
-                    color: #52796f;
-                    line-height: 1.5;
-                }
-            </style>
-
-            <!-- Penjelasan Singkat Naratif -->
-            <div class="about-box" style="margin-bottom: 16px;">
-                <h3 style="color: #1b4332; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 6px; font-weight: 700;">Pengantar Fase</h3>
-                <p style="font-size: 0.76rem; color: #52796f; line-height: 1.6;">
-                    Fase formatif adalah fondasi awal pertumbuhan ilmu tafsir. Pada masa ini, penafsiran Al-Qur'an belum dibukukan secara mandiri, melainkan disampaikan secara lisan (riwayat syafahi) langsung dari Nabi Muhammad SAW kepada para sahabat, lalu diteruskan ke generasi tabi'in.
-                </p>
-            </div>
-
-            <!-- PETA KONSEP BERPANAH-PANAH -->
-            <div class="section-title">Peta Konsep Alur & Karakteristik</div>
-            
-            <div class="flow-box">
-                <div class="flow-title">1. Sumber & Karakteristik Pokok</div>
-                <div class="flow-desc">Bersumber langsung dari penjelasan Nabi SAW, pemahaman kontekstual sahabat terhadap asbabun nuzul, dan riwayat lisan murni tanpa pembukuan sistematis.</div>
-            </div>
-
-            <div class="flow-arrow">↓</div>
-
-            <div class="flow-box">
-                <div class="flow-title">2. Jaringan Sanad & Madrasah Utama</div>
-                <div class="flow-desc">
-                    • <strong>Madrasah Makkah:</strong> Dipimpin Abdullah bin Abbas.<br>
-                    • <strong>Madrasah Madinah:</strong> Dipimpin Ubay bin Ka'ab.<br>
-                    • <strong>Madrasah Iraq (Kuffah):</strong> Dipimpin Abdullah bin Mas'ud.
+            <div class="sec-card">
+                <div class="sec-title">1. Pengertian Fase Formatif</div>
+                <p class="sec-text">Fase formatif merupakan fase awal terbentuknya tradisi penafsiran Al-Qur'an, yaitu sejak masa Nabi Muhammad saw., kemudian dilanjutkan pada masa sahabat dan tabi'in. Fase ini menjadi dasar bagi perkembangan ilmu tafsir pada masa-masa berikutnya.</p>
+                <p class="sec-text">Disebut fase formatif karena pada masa ini kegiatan penafsiran Al-Qur'an mulai terbentuk, baik dari segi cara memahami ayat, sumber penafsiran, maupun proses penyampaian pengetahuan tafsir dari satu generasi ke generasi berikutnya.</p>
+                <p class="sec-text">Pada fase ini, tafsir belum menjadi disiplin ilmu yang berdiri sendiri seperti sekarang. Penafsiran masih dilakukan secara sederhana, berdasarkan penjelasan Nabi, pemahaman para sahabat, serta penjelasan generasi tabi'in yang menerima ilmu dari sahabat.</p>
+                
+                <div style="font-size: 0.75rem; font-weight: 700; color: #2d6a4f; margin: 10px 0 6px 0;">Gambaran perkembangan fase formatif:</div>
+                <div class="flow-box">
+                    <strong style="font-size: 0.76rem; color: #1b4332;">Masa Nabi Muhammad saw.</strong>
+                    <div style="font-size: 0.72rem; color: #52796f;">Sumber utama penjelasan dan penafsiran Al-Qur'an.</div>
+                </div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-box">
+                    <strong style="font-size: 0.76rem; color: #1b4332;">Masa Sahabat</strong>
+                    <div style="font-size: 0.72rem; color: #52796f;">Menerima penjelasan Nabi, memahami ayat, dan menyampaikan tafsir.</div>
+                </div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-box">
+                    <strong style="font-size: 0.76rem; color: #1b4332;">Masa Tabi'in</strong>
+                    <div style="font-size: 0.72rem; color: #52796f;">Menerima tafsir dari sahabat dan mengembangkan penjelasan berdasarkan pengetahuan yang diwariskan.</div>
+                </div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-box">
+                    <strong style="font-size: 0.76rem; color: #1b4332;">Perkembangan ilmu tafsir</strong>
+                    <div style="font-size: 0.72rem; color: #52796f;">Menjadi dasar bagi pembukuan dan perkembangan ilmu tafsir pada periode selanjutnya.</div>
                 </div>
             </div>
 
-            <div class="flow-arrow">↓</div>
-
-            <div class="flow-box">
-                <div class="flow-title">3. Tokoh & Hubungan Guru-Murid</div>
-                <div class="flow-desc">
-                    • <em>Ibnu Abbas</em> (Guru) ➔ melahirkan murid seperti <strong>Mujahid bin Jabar, Ikrimah, & Thawus</strong>.<br>
-                    • <em>Abdullah bin Mas'ud</em> (Guru) ➔ melahirkan murid seperti <strong>Al-Qamah bin Qais & Al-Aswad</strong>.
-                </div>
+            <div class="sec-card">
+                <div class="sec-title">2. Karakteristik Periwayatan Lisan</div>
+                <p class="sec-text">Salah satu karakteristik paling menonjol pada fase formatif adalah periwayatan tafsir yang dilakukan secara lisan. Artinya, pengetahuan mengenai makna dan kandungan ayat Al-Qur'an disampaikan melalui proses mendengar, menghafal, memahami, kemudian mengajarkannya kembali kepada orang lain.</p>
+                <p class="sec-text">Pada masa sahabat, mereka memperoleh penjelasan ayat secara langsung dari Nabi Muhammad saw. Ketika Nabi menjelaskan suatu ayat, para sahabat mendengarkan, mengingat, dan menyampaikan kembali penjelasan tersebut kepada sahabat lainnya. Setelah Nabi wafat, para sahabat menjadi sumber rujukan bagi generasi berikutnya melalui majelis ilmu.</p>
+                <ul class="sec-list">
+                    <li><strong>Mengandalkan hafalan:</strong> Pengetahuan tafsir banyak disimpan melalui ingatan, kemudian disampaikan kembali secara lisan.</li>
+                    <li><strong>Melalui proses belajar langsung:</strong> Generasi setelahnya memperoleh pengetahuan dengan mendengarkan penjelasan guru.</li>
+                    <li><strong>Berdasarkan hubungan guru dan murid:</strong> Pengetahuan tafsir diwariskan melalui hubungan keilmuan antargenerasi.</li>
+                    <li><strong>Belum dibukukan secara sistematis:</strong> Tafsir belum dikumpulkan menjadi kitab tersendiri sebagaimana perkembangan pada masa berikutnya.</li>
+                </ul>
+                <p class="sec-text" style="margin-bottom: 0;">Perlu dipahami bahwa belum dibukukan secara sistematis bukan berarti tidak ada catatan tertulis sama sekali. Pada masa awal Islam sudah terdapat aktivitas penulisan, tetapi tradisi lisan masih menjadi salah satu jalur utama penyampaian pengetahuan.</p>
+            </div>
+            <!-- HALAMAN FASE FORMATIF: BAGIAN 2 & KESIMPULAN -->
+            <div class="sec-card">
+                <div class="sec-title">3. Penjelasan Langsung (Tafsir Bil Ma'tsur)</div>
+                <p class="sec-text">Karakteristik berikutnya adalah penafsiran yang bersumber dari penjelasan langsung dan riwayat yang diwariskan. Pada masa Nabi, apabila sahabat menemukan ayat yang sulit dipahami, mereka bertanya langsung kepada Nabi Muhammad saw.</p>
+                <p class="sec-text">Setelah Nabi wafat, para sahabat menggunakan beberapa sumber dalam memahami Al-Qur'an:</p>
+                <ul class="sec-list">
+                    <li><strong>Al-Qur'an:</strong> Menjelaskan suatu ayat dengan ayat lainnya.</li>
+                    <li><strong>Penjelasan Nabi:</strong> Menggunakan hadis atau keterangan Nabi yang mereka terima.</li>
+                    <li><strong>Pemahaman sahabat:</strong> Menggunakan pengetahuan, pengalaman, dan pemahaman mereka terhadap konteks turunnya ayat.</li>
+                    <li><strong>Ijtihad:</strong> Menggunakan kemampuan berpikir untuk memahami ayat yang belum mendapatkan penjelasan secara langsung.</li>
+                </ul>
+                <p class="sec-text" style="margin-bottom: 0;">Pada perkembangan selanjutnya, penafsiran yang didasarkan pada riwayat-riwayat tersebut dikenal dengan istilah <em>tafsir bil ma'tsur</em>.</p>
             </div>
 
-            <div class="flow-arrow">↓</div>
-
-            <div class="flow-box">
-                <div class="flow-title">4. Corak Periwayatan (Bil-Ma'tsur)</div>
-                <div class="flow-desc">Dominan menggunakan pendekatan riwayat teks (tafsir ayat dengan ayat, atau ayat dengan hadis Nabi dan atsar sahabat).</div>
+            <div class="sec-card">
+                <div class="sec-title">4. Otoritas Awal & 5. Peta Konsep Sanad</div>
+                <p class="sec-text">Otoritas tafsir berkembang dari masa Nabi Muhammad saw. (QS. An-Nahl: 44), dilanjutkan generasi sahabat utama (Ibn Abbas, Ibn Mas'ud, Ubay bin Ka'ab, Ali bin Abi Thalib), hingga generasi tabi'in (Mujahid, Ikrimah, Qatadah).</p>
+                <p class="sec-text" style="margin-bottom: 0;"><strong>Sanad</strong> adalah rangkaian perawi yang menyampaikan suatu riwayat hingga sumbernya, berfungsi menjaga otentisitas dan menguji keabsahan riwayat tafsir.</p>
             </div>
 
+            <div class="sec-card" style="margin-bottom: 0;">
+                <div class="sec-title">6. Pusat Tafsir, 7. Perbandingan & 8. Kesimpulan</div>
+                <p class="sec-text">Pusat pembelajaran tafsir masa tabi'in berkembang di Makkah, Madinah, Kufah, dan Basrah. Inti fase formatif adalah pewarisan ilmu melalui sanad dan hubungan guru-murid yang menjadi fondasi ilmu tafsir.</p>
+            </div>
         </main>
     </div>
-    
-        <div id="page-epistemologi" class="page-section">
+
+    <!-- HALAMAN FASE KODIFIKASI & KLASIK -->
+    <div id="page-fase-kodifikasi" class="page-section">
         <main class="main-container">
             <div class="content-header">
-                <h2 style="color: #1b4332; font-size: 1rem;">🗺️ Peta Epistemologi Tafsir</h2>
-                <a class="back-btn" onclick="switchPage('tafsir')">← Kajian Tafsir</a>
+                <h2 style="color: #1b4332; font-size: 1rem;">📚 Fase Kodifikasi & Klasik</h2>
+                <a class="back-btn" onclick="switchPage('epistemologi-menu')">← Kembali</a>
             </div>
 
-            <div class="focus-section" style="margin-bottom: 16px;">
-                <p style="font-size: 0.78rem; color: #2c3e50; line-height: 1.7;">
-                    Modul ini memetakan perjalanan historis, epistemologis, dan metodologis perkembangan tafsir Al-Qur'an dari masa formatif hingga era kontemporer secara sistematis.
-                </p>
+            <div class="sec-card">
+                <div class="sec-title">1. Pengertian Fase Kodifikasi & Klasik</div>
+                <p class="sec-text">Fase kodifikasi adalah masa ketika riwayat tafsir mulai dikumpulkan dan ditulis secara teratur. Fase klasik adalah masa berkembang pesatnya karya tafsir yang sistematis dari segi metode, corak, dan pendekatan.</p>
+                <div style="font-size: 0.75rem; font-weight: 700; color: #2d6a4f; margin: 8px 0 6px 0;">Peta Konsep Perkembangan:</div>
+                <div class="flow-box"><strong style="color: #1b4332;">Fase Formatif</strong><div style="font-size: 0.71rem; color: #52796f;">Penafsiran lisan dan periwayatan langsung.</div></div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-box"><strong style="color: #1b4332;">Fase Kodifikasi</strong><div style="font-size: 0.71rem; color: #52796f;">Riwayat tafsir mulai dikumpulkan dan dibukukan.</div></div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-box"><strong style="color: #1b4332;">Fase Klasik</strong><div style="font-size: 0.71rem; color: #52796f;">Lahirnya kitab tafsir sistematis dengan beragam metode.</div></div>
             </div>
 
-            <!-- Poin 1 & 5: Fase & Karakteristik -->
-            <div class="about-box" style="margin-bottom: 14px;">
-                <h3 style="color: #1b4332; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 8px; font-weight: 700;">1. Fase & Karakteristik Penafsiran</h3>
-                <p style="font-size: 0.76rem; color: #52796f; margin-bottom: 6px;">• <strong>Fase Formatif (Era Nabi & Sahabat):</strong> Bersifat lisan (riwayat), penjelasan global, dan langsung merujuk pada konteks turunnya ayat (asbabun nuzul).</p>
-                <p style="font-size: 0.76rem; color: #52796f; margin-bottom: 6px;">• <strong>Fase Kodifikasi (Klasik):</strong> Pembukuan resmi disiplin ilmu tafsir, penguatan kaidah bahasa Arab, qira'at, serta pemisahan antara riwayat (*ma'tsur*) dan ijtihad (*ra'yi*).</p>
-                <p style="font-size: 0.76rem; color: #52796f; margin-bottom: 0;">• <strong>Fase Kontemporer / Modern:</strong> Berorientasi pada solusi problem sosial kemasyarakatan (*adabi ijtima'i*), metode tematik (*maudhu'i*), hingga pisau analisis hermeneutika.</p>
+            <div class="sec-card">
+                <div class="sec-title">2. Pembukuan Sistematis (Kodifikasi Tafsir)</div>
+                <p class="sec-text"><strong>Faktor Pendorong:</strong> Perluasan wilayah Islam, wafatnya generasi awal penghafal riwayat, kebutuhan sumber tertulis, serta kemajuan ilmu bahasa Arab dan fikih.</p>
             </div>
 
-            <!-- Poin 2 & 3: Tokoh & Hubungan Guru-Murid (Sanad) -->
-            <div class="about-box" style="margin-bottom: 14px;">
-                <h3 style="color: #1b4332; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 8px; font-weight: 700;">2. Tokoh Utama & Jaringan Sanad (Guru-Murid)</h3>
-                <p style="font-size: 0.76rem; color: #52796f; margin-bottom: 6px;">• <strong>Madrasah Makkah:</strong> Dipimpin oleh <em>Abdullah bin Abbas</em> (Bahrul Ummah), menurunkan murid-murid hebat seperti Mujahid bin Jabar, Ikrimah, dan Thawus bin Kaisan.</p>
-                <p style="font-size: 0.76rem; color: #52796f; margin-bottom: 6px;">• <strong>Madrasah Madinah:</strong> Dipimpin oleh <em>Ubay bin Ka'ab</em>, menurunkan tokoh seperti Muhammad bin Ka'ab dan Zaid bin Aslam.</p>
-                <p style="font-size: 0.76rem; color: #52796f; margin-bottom: 0;">• <strong>Madrasah Iraq (Kuffah):</strong> Dipimpin oleh <em>Abdullah bin Mas'ud</em>, menurunkan Al-Qamah bin Qais dan Al-Aswad bin Yazid.</p>
+            <div class="sec-card">
+                <div class="sec-title">3. Lahirnya Korpus Kitab Tafsir Klasik</div>
+                <p class="sec-text">Kumpulan literatur warisan para mufasir besar:</p>
+                <ul class="sec-list" style="margin-bottom: 0;">
+                    <li><strong>Muqatil bin Sulaiman (w. 150 H):</strong> <em>Tafsir Muqatil</em> (karya awal berurutan).</li>
+                    <li><strong>Imam al-Tabari (w. 310 H):</strong> <em>Jami' al-Bayan</em> (primadona penghimpun riwayat).</li>
+                    <li><strong>Imam al-Maturidi (w. 333 H):</strong> <em>Ta'wilat Ahl al-Sunnah</em> (pendekatan teologis rasional).</li>
+                    <li><strong>Az-Zamakhsyari (w. 538 H):</strong> <em>Al-Kasysyaf</em> (puncak keindahan balaghah).</li>
+                    <li><strong>Fakhruddin ar-Razi (w. 606 H):</strong> <em>Mafatih al-Ghaib</em> (analisis filosofis dan kalam).</li>
+                    <li><strong>Imam al-Qurthubi (w. 671 H):</strong> <em>Al-Jami' li Ahkam al-Qur'an</em> (fokus ayat hukum/fikih).</li>
+                    <li><strong>Ibnu Katsir (w. 774 H):</strong> <em>Tafsir al-Qur'an al-'Azim</em> (rujukan utama berbasis riwayat).</li>
+                </ul>
             </div>
 
-            <!-- Poin 4: Karya-Karya Tafsir -->
-            <div class="about-box" style="margin-bottom: 14px;">
-                <h3 style="color: #1b4332; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 8px; font-weight: 700;">3. Korpus Karya Tafsir Klasik & Modern</h3>
-                <p style="font-size: 0.76rem; color: #52796f; margin-bottom: 6px;">• <em>Jami' al-Bayan fi Ta'wil al-Qur'an</em> (Ibnu Jarir al-Thabari) - Primadona tafsir bil-ma'tsur.</p>
-                <p style="font-size: 0.76rem; color: #52796f; margin-bottom: 6px;">• <em>Al-Kasysyaf 'an Haqa'iq Ghawamid al-Tanzil</em> (Al-Zamakhsyari) - Representasi tafsir kebahasaan & teologis.</p>
-                <p style="font-size: 0.76rem; color: #52796f; margin-bottom: 6px;">• <em>Tafsir al-Qur'an al-Azhim</em> (Ibnu Katsir) - Rujukan utama berbasis riwayat salaf.</p>
-                <p style="font-size: 0.76rem; color: #52796f; margin-bottom: 0;">• <em>Tafsir al-Manar</em> (Muhammad Abduh / Rasyid Ridha) - Pelopor corak modern sosial-keagamaan.</p>
+            <div class="sec-card">
+                <div class="sec-title">4. Tafsir Bil-Ma'tsur & Tafsir Bir-Ra'yi</div>
+                <p class="sec-text"><strong>Bil-Ma'tsur:</strong> Bersandar pada riwayat sahih (Al-Qur'an, hadis, sahabat, tabi'in) seperti Al-Tabari & Ibnu Katsir.</p>
+                <p class="sec-text" style="margin-bottom: 0;"><strong>Bir-Ra'yi:</strong> Bersandar pada ijtihad ilmiah dan kaidah bahasa (terbagi jadi <em>mahmud</em> dan <em>madzmum</em>) seperti karya Zamakhsyari.</p>
             </div>
 
-            <!-- Poin 6: Sumber dan Corak Periwayatan -->
-            <div class="about-box" style="margin-bottom: 0;">
-                <h3 style="color: #1b4332; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 8px; font-weight: 700;">4. Sumber & Corak Periwayatan Utama</h3>
-                <p style="font-size: 0.76rem; color: #52796f; margin-bottom: 6px;">• <strong>Bil-Ma'tsur:</strong> Bersandar pada Al-Qur'an, Hadis, dan Atsar Sahabat.</p>
-                <p style="font-size: 0.76rem; color: #52796f; margin-bottom: 6px;">• <strong>Bir-Ra'yi:</strong> Bersandar pada ijtihad rasional yang memenuhi syarat keilmuan bahasa.</p>
-                <p style="font-size: 0.76rem; color: #52796f; margin-bottom: 0;">• <strong>Corak Khusus:</strong> Fiqhi (hukum), Lughawi (kebahasaan), Falsafi (filsafat), Sufi/Isyari (tasawuf), dan Adabi Ijtima'i (sosial).</p>
+            <div class="sec-card" style="margin-bottom: 0;">
+                <div class="sec-title">5. Perbandingan & Kesimpulan</div>
+                <table class="comp-table">
+                    <thead><tr><th>Aspek</th><th>Bil-Ma'tsur</th><th>Bir-Ra'yi</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Dasar</strong></td><td>Riwayat & Atsar</td><td>Penalaran & Ijtihad Ilmiah</td></tr>
+                        <tr><td><strong>Tokoh</strong></td><td>Al-Tabari, Ibnu Katsir</td><td>Az-Zamakhsyari, Ar-Razi</td></tr>
+                    </tbody>
+                </table>
+                <p class="sec-text" style="margin-top: 8px; margin-bottom: 0;"><strong>Kesimpulan:</strong> Fase kodifikasi dan klasik adalah masa pembukuan warisan lisan menjadi tradisi keilmuan tafsir yang sistematis dan menjadi rujukan peradaban Islam hingga hari ini.</p>
             </div>
         </main>
     </div>
 
+    <!-- HALAMAN HADIS -->
     <div id="page-hadis" class="page-section">
         <div class="main-container">
             <div class="content-header">
                 <h2 style="color: #1b4332; font-size: 1rem;">📜 Pengantar Ilmu Hadis</h2>
                 <a class="back-btn" onclick="switchPage('home')">← Beranda</a>
             </div>
-            <div class="term-item">
-                <div class="term-arabic">حديث صحيح</div>
-                <div class="term-title">Hadis Sahih</div>
-                <div class="term-desc-short">Hadis dengan sanad bersambung dan perawi yang adil serta dhabit.</div>
-            </div>
-            <div class="term-item">
-                <div class="term-arabic">حديث حسن</div>
-                <div class="term-title">Hadis Hasan</div>
-                <div class="term-desc-short">Hadis yang kedhabitannya sedikit di bawah standar sahih.</div>
-            </div>
-            <div class="term-item">
-                <div class="term-arabic">حديث ضعيف</div>
-                <div class="term-title">Hadis Dhaif</div>
-                <div class="term-desc-short">Hadis yang tidak memenuhi standar syarat sahih maupun hasan.</div>
-            </div>
+            <div class="term-item"><div class="term-arabic">حديث صحيح</div><div class="term-title">Hadis Sahih</div><div class="term-desc-short">Hadis dengan sanad bersambung dan perawi adil serta dhabit.</div></div>
         </div>
     </div>
 
+    <!-- HALAMAN TAJWID -->
     <div id="page-tajwid" class="page-section">
         <div class="main-container">
             <div class="content-header">
                 <h2 style="color: #1b4332; font-size: 1rem;">✨ Dasar Ilmu Tajwid</h2>
                 <a class="back-btn" onclick="switchPage('home')">← Beranda</a>
             </div>
-            <div class="term-item">
-                <div class="term-title">Hukum Nun Mati & Tanwin</div>
-                <div class="term-desc-short">Hukum bacaan saat nun sukun bertemu huruf hijaiyah (Izhar, Idgham, Iqlab, Ikhfa).</div>
-            </div>
+            <div class="term-item"><div class="term-title">Hukum Nun Mati & Tanwin</div><div class="term-desc-short">Hukum bacaan nun sukun bertemu huruf hijaiyah.</div></div>
         </div>
     </div>
 
+    <!-- MODAL DETAIL & JAVASCRIPT -->
     <div id="detailModal" class="modal-overlay" onclick="closeDetail(event)">
         <div class="modal-content" onclick="event.stopPropagation()">
             <span class="modal-close" onclick="closeDetailForce()">&times;</span>
@@ -1015,55 +705,33 @@
         </div>
     </div>
 
-    <footer class="footer">
-        🌿 &copy; 2026 RDA Quran Studio. Ruang Baca & Studi Digital.
-    </footer>
+    <footer class="footer">🌿 &copy; 2026 RDA Quran Studio. Ruang Baca & Studi Digital.</footer>
 
     <script>
         function switchPage(pageName) {
-    const pages = document.querySelectorAll('.page-section');
-    pages.forEach(p => p.classList.remove('active'));
-
-    const target = document.getElementById('page-' + pageName);
-    if (target) {
-        target.classList.add('active');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-}
-
+            const pages = document.querySelectorAll('.page-section');
+            pages.forEach(p => p.classList.remove('active'));
+            const target = document.getElementById('page-' + pageName);
+            if (target) { target.classList.add('active'); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+        }
         function searchTerms() {
             let input = document.getElementById('searchInput').value.toLowerCase();
             let items = document.querySelectorAll('#termList .term-item');
-
             items.forEach(item => {
                 let text = item.textContent.toLowerCase();
-                if (text.includes(input)) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
+                item.style.display = text.includes(input) ? 'block' : 'none';
             });
         }
-
         function openDetail(title, arabic, body, source) {
             document.getElementById('modalTitle').textContent = title;
             document.getElementById('modalArabic').textContent = arabic;
             document.getElementById('modalBody').textContent = body;
             document.getElementById('modalSource').textContent = "Sumber Rujukan: " + source;
-            
             document.getElementById('detailModal').classList.add('active');
         }
-
-        function closeDetail(event) {
-            if (event.target.classList.contains('modal-overlay')) {
-                document.getElementById('detailModal').classList.remove('active');
-            }
-        }
-
-        function closeDetailForce() {
-            document.getElementById('detailModal').classList.remove('active');
-        }
+        function closeDetail(event) { if (event.target.classList.contains('modal-overlay')) document.getElementById('detailModal').classList.remove('active'); }
+        function closeDetailForce() { document.getElementById('detailModal').classList.remove('active'); }
     </script>
 </body>
 </html>
-                
+            
